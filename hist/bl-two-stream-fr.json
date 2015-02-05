@@ -1,0 +1,181 @@
+{
+ "simulation": {
+  "archetypes": {
+   "spec": [
+    {"lib": "agents", "name": "Source"}, 
+    {"lib": "Brightlite", "name": "ReactorFacility"}, 
+    {"lib": "Brightlite", "name": "FuelfabFacility"}, 
+    {"lib": "Brightlite", "name": "ReprocessFacility"}, 
+    {"lib": "agents", "name": "Sink"}, 
+    {"lib": "agents", "name": "NullRegion"}, 
+    {"lib": "cycamore", "name": "DeployInst"}
+   ]
+  }, 
+  "control": {"duration": "800", "startmonth": "1", "startyear": "2000"}, 
+  "facility": [
+   {
+    "config": {"Source": {"capacity": "100.0", "commod": "fbl", "recipe_name": "U235"}}, 
+    "name": "Source"
+   }, 
+   {
+    "config": {"Source": {"capacity": "4450.0", "commod": "fbl1", "recipe_name": "U238"}}, 
+    "name": "Source1"
+   }, 
+   {
+    "config": {"Source": {"capacity": "100.0", "commod": "NU", "recipe_name": "NU_recipe"}}, 
+    "name": "Source2"
+   }, 
+   {
+    "config": {"Sink": {"capacity": "1000000.0", "in_commods": {"val": "reproFuel1"}}}, 
+    "name": "Sink2"
+   }, 
+   {
+    "config": {"Sink": {"capacity": "1000000.0", "in_commods": {"val": "spentFF"}}}, 
+    "name": "Sink3"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_terminal": "0", 
+      "batches": "3", 
+      "burnupcalc_timestep": "40", 
+      "core_mass": "1500.0", 
+      "cylindrical_delta": "10", 
+      "flux_mode": "1", 
+      "in_commods": {"val": "fuel"}, 
+      "libraries": {"val": "extLWR"}, 
+      "nonleakage": "0.966", 
+      "out_commod": "spentFuel", 
+      "target_burnup": "35.0", 
+      "trans_created": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
+      "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
+     }
+    }, 
+    "name": "Rx1"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_terminal": "0", 
+      "batches": "3", 
+      "burnupcalc_timestep": "40", 
+      "core_mass": "1500.0", 
+      "cylindrical_delta": "10", 
+      "flux_mode": "1", 
+      "in_commods": {"val": "fuel"}, 
+      "libraries": {"val": "standLWR"}, 
+      "nonleakage": "0.948", 
+      "out_commod": "spentFuel", 
+      "target_burnup": "40.0", 
+      "trans_created": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
+      "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
+     }
+    }, 
+    "name": "Rx2"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_terminal": "0", 
+      "batches": "4", 
+      "burnupcalc_timestep": "40", 
+      "core_mass": "1500.0", 
+      "cylindrical_delta": "10", 
+      "flux_mode": "1", 
+      "in_commods": {"val": "fuel"}, 
+      "libraries": {"val": "extLWR"}, 
+      "nonleakage": "0.966", 
+      "out_commod": "spentFuel", 
+      "target_burnup": "45.0", 
+      "trans_created": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
+      "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
+     }
+    }, 
+    "name": "Rx3"
+   }, 
+   {
+    "config": {
+     "FuelfabFacility": {"in_commods": {"val": ["fbl", "fbl1"]}, "out_commod": "fuel"}
+    }, 
+    "name": "FFUOX"
+   }, 
+   {
+    "config": {
+     "ReprocessFacility": {
+      "commod_out": {"val": ["reproFuel0", "reproFuel1"]}, 
+      "in_commod": {"val": "spentFuel"}, 
+      "input_capacity": "1000000", 
+      "output_capacity": "1000000", 
+      "repro_input_path": "../Bright-lite/input/reprocess_input.txt"
+     }
+    }, 
+    "name": "Repro"
+   }, 
+   {
+    "config": {
+     "FuelfabFacility": {"in_commods": {"val": ["reproFuel0", "NU"]}, "out_commod": "FFfuel"}
+    }, 
+    "name": "FFMOX"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_terminal": "1", 
+      "batches": "6", 
+      "burnupcalc_timestep": "40", 
+      "core_mass": "300.0", 
+      "cylindrical_delta": "10", 
+      "flux_mode": "2", 
+      "in_commods": {"val": "FFfuel"}, 
+      "interpol_pairs": {"key": "BURNUP", "val": "185"}, 
+      "libraries": {"val": "FR50"}, 
+      "nonleakage": "0.57", 
+      "out_commod": "spentFF", 
+      "target_burnup": "185.0", 
+      "trans_created": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
+      "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
+     }
+    }, 
+    "name": "RxFR"
+   }
+  ], 
+  "recipe": [
+   {"basis": "mass", "name": "U235", "nuclide": {"comp": "100", "id": "922350000"}}, 
+   {"basis": "mass", "name": "U238", "nuclide": {"comp": "100", "id": "922380000"}}, 
+   {
+    "basis": "mass", 
+    "name": "NU_recipe", 
+    "nuclide": [{"comp": "99.289", "id": "922380000"}, {"comp": "0.711", "id": "922350000"}]
+   }
+  ], 
+  "region": {
+   "config": {"NullRegion": null}, 
+   "institution": {
+    "config": {
+     "DeployInst": {
+      "buildorder": [
+       {"date": "200", "number": "1", "prototype": "RxFR"}, 
+       {"date": "60", "number": "2", "prototype": "Rx2"}, 
+       {"date": "120", "number": "2", "prototype": "Rx3"}, 
+       {"date": "8", "number": "1", "prototype": "FFMOX"}
+      ]
+     }
+    }, 
+    "initialfacilitylist": {
+     "entry": [
+      {"number": "1", "prototype": "Source"}, 
+      {"number": "1", "prototype": "Source1"}, 
+      {"number": "1", "prototype": "Source2"}, 
+      {"number": "2", "prototype": "Rx1"}, 
+      {"number": "1", "prototype": "FFUOX"}, 
+      {"number": "1", "prototype": "Sink2"}, 
+      {"number": "1", "prototype": "Sink3"}, 
+      {"number": "1", "prototype": "Repro"}
+     ]
+    }, 
+    "name": "SingleInstitution"
+   }, 
+   "name": "SingleRegion"
+  }
+ }
+}

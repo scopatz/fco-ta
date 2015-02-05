@@ -1,0 +1,311 @@
+{
+ "simulation": {
+  "archetypes": {
+   "spec": [
+    {"lib": "cycamore", "name": "Source"}, 
+    {"lib": "cycamore", "name": "EnrichmentFacility"}, 
+    {"lib": "cycamore", "name": "GrowthRegion"}, 
+    {"lib": "cycamore", "name": "BatchReactor"}, 
+    {"lib": "MktDrivenInst", "name": "MktDrivenInst", "path": "mktdriveninst"}, 
+    {"lib": "StreamBlender", "name": "StreamBlender", "path": "streamblender"}, 
+    {"lib": "CommodConverter", "name": "CommodConverter", "path": "commodconverter"}, 
+    {
+     "lib": "SeparationMatrix", 
+     "name": "SeparationMatrix", 
+     "path": "separationmatrix"
+    }, 
+    {"lib": "cycamore", "name": "Sink"}
+   ]
+  }, 
+  "control": {"duration": "1200", "startmonth": "1", "startyear": "2015"}, 
+  "facility": [
+   {
+    "config": {
+     "Source": {"capacity": "200000", "out_commod": "nat_u", "recipe_name": "nat_u_recipe"}
+    }, 
+    "lifetime": "1200", 
+    "name": "Mine"
+   }, 
+   {
+    "config": {
+     "CommodConverter": {
+      "in_commod": "nat_u", 
+      "in_recipe": "nat_u_recipe", 
+      "out_commod": "leu", 
+      "out_recipe": "leu_recipe", 
+      "process_time": "0"
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "Enrichment"
+   }, 
+   {
+    "config": {
+     "CommodConverter": {
+      "in_commod": "leu", 
+      "in_recipe": "leu_recipe", 
+      "out_commod": "fresh_lwr_fuel", 
+      "out_recipe": "fresh_lwr_fuel_recipe", 
+      "process_time": "12"
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "LWRFuelFab"
+   }, 
+   {
+    "config": {
+     "StreamBlender": {
+      "in_commods": {"val": ["rep_sfr_tru", "rep_lwr_tru", "rep_sfr_u", "dep_u", "nat_u"]}, 
+      "in_recipes": {
+       "val": [
+        "rep_sfr_tru_recipe", 
+        "rep_lwr_tru_recipe", 
+        "rep_sfr_u_recipe", 
+        "dep_u_recipe", 
+        "nat_u_recipe"
+       ]
+      }, 
+      "isos": {"val": ["94240", "94240", "92235", "92235", "92235", "94239", "95241"]}, 
+      "out_commod": "fresh_sfr_fuel", 
+      "out_recipe": "fresh_sfr_fuel_recipe", 
+      "process_time": "12", 
+      "sources": {
+       "val": [
+        "rep_sfr_tru", 
+        "rep_lwr_tru", 
+        "rep_sfr_u", 
+        "dep_u", 
+        "nat_u", 
+        "rep_lwr_tru", 
+        "rep_lwr_tru"
+       ]
+      }
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "SFRFuelFab"
+   }, 
+   {
+    "config": {
+     "BatchReactor": {
+      "batchsize": "9950.0", 
+      "commodity_production": {"capacity": "90", "commodity": "power", "cost": "90"}, 
+      "fuel": {
+       "incommodity": "fresh_lwr_fuel", 
+       "inrecipe": "fresh_lwr_fuel_recipe", 
+       "outcommodity": "lwr_unf", 
+       "outrecipe": "lwr_unf_recipe"
+      }, 
+      "nbatches": "9", 
+      "nreload": "2", 
+      "processtime": "12"
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "LWR"
+   }, 
+   {
+    "config": {
+     "BatchReactor": {
+      "batchsize": "198.0", 
+      "commodity_production": {"capacity": "30", "commodity": "power", "cost": "30"}, 
+      "fuel": {
+       "incommodity": "fresh_sfr_fuel", 
+       "inrecipe": "fresh_sfr_fuel_recipe", 
+       "outcommodity": "sfr_unf", 
+       "outrecipe": "sfr_unf_recipe"
+      }, 
+      "nbatches": "79", 
+      "nreload": "20", 
+      "processtime": "12"
+     }
+    }, 
+    "lifetime": "720", 
+    "name": "SFR"
+   }, 
+   {
+    "config": {
+     "CommodConverter": {
+      "in_commod": "lwr_unf", 
+      "in_recipe": "lwr_unf_recipe", 
+      "out_commod": "lwr_unf_cool", 
+      "out_recipe": "lwr_unf_recipe", 
+      "process_time": "48"
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "LWRWetStorage"
+   }, 
+   {
+    "config": {
+     "CommodConverter": {
+      "in_commod": "sfr_unf", 
+      "in_recipe": "sfr_unf_recipe", 
+      "out_commod": "sfr_unf_cool", 
+      "out_recipe": "sfr_unf_recipe", 
+      "process_time": "12"
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "SFRWetStorage"
+   }, 
+   {
+    "config": {
+     "SeparationMatrix": {
+      "capacity": "166667", 
+      "cost": "0", 
+      "effs": {"val": ["1", "1", "1"]}, 
+      "elems": {"val": ["92", "94", "95"]}, 
+      "in_commod": "lwr_unf_cool", 
+      "out_commods": {"val": ["rep_lwr_tru", "rep_lwr_u"]}, 
+      "process_time": "0", 
+      "streams": {"val": ["rep_lwr_u", "rep_lwr_tru", "rep_lwr_tru"]}
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "LWRSeparations"
+   }, 
+   {
+    "config": {
+     "SeparationMatrix": {
+      "effs": {"val": ["1", "1", "1"]}, 
+      "elems": {"val": ["92", "94", "95"]}, 
+      "in_commod": "sfr_unf_cool", 
+      "out_commods": {"val": ["rep_sfr_tru", "rep_sfr_u"]}, 
+      "process_time": "0", 
+      "streams": {"val": ["rep_sfr_u", "rep_sfr_tru", "rep_sfr_tru"]}
+     }
+    }, 
+    "lifetime": "1200", 
+    "name": "SFRSeparations"
+   }, 
+   {
+    "config": {"Sink": {"capacity": "200000", "in_commods": {"val": "waste"}}}, 
+    "lifetime": "1200", 
+    "name": "Repository"
+   }
+  ], 
+  "recipe": [
+   {
+    "basis": "mass", 
+    "name": "nat_u_recipe", 
+    "nuclide": [{"comp": "0.711", "id": "92235"}, {"comp": "99.289", "id": "92238"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "leu_recipe", 
+    "nuclide": [{"comp": "4.3", "id": "92235"}, {"comp": "95.7", "id": "92238"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "dep_u_recipe", 
+    "nuclide": [{"comp": "0.25", "id": "92235"}, {"comp": "99.75", "id": "92238"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "fresh_lwr_fuel_recipe", 
+    "nuclide": [{"comp": "4.3", "id": "92235"}, {"comp": "95.7", "id": "92235"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "fresh_sfr_fuel_recipe", 
+    "nuclide": [
+     {"comp": "86.13", "id": "92235"}, 
+     {"comp": "13.87", "id": "94239"}, 
+     {"comp": "0.48", "id": "95241"}
+    ]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "lwr_unf_recipe", 
+    "nuclide": [
+     {"comp": "93.44", "id": "92235"}, 
+     {"comp": "1.20", "id": "94239"}, 
+     {"comp": "0.1", "id": "95241"}, 
+     {"comp": "5.26", "id": "43099"}
+    ]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "sfr_unf_recipe", 
+    "nuclide": [
+     {"comp": "78.30", "id": "92235"}, 
+     {"comp": "13.56", "id": "94239"}, 
+     {"comp": "0.48", "id": "95241"}, 
+     {"comp": "7.66", "id": "43099"}
+    ]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "rep_sfr_tru_recipe", 
+    "nuclide": [{"comp": "13.56", "id": "94239"}, {"comp": "0.48", "id": "95241"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "rep_lwr_tru_recipe", 
+    "nuclide": [{"comp": "1.20", "id": "94239"}, {"comp": "0.1", "id": "95241"}]
+   }, 
+   {
+    "basis": "mass", 
+    "name": "rep_sfr_u_recipe", 
+    "nuclide": {"comp": "78.30", "id": "92235"}
+   }, 
+   {
+    "basis": "mass", 
+    "name": "rep_lwr_u_recipe", 
+    "nuclide": {"comp": "93.44", "id": "92235"}
+   }
+  ], 
+  "region": {
+   "config": {
+    "GrowthRegion": {
+     "commodity_name": "power", 
+     "demand_params": {"val": "0 90"}, 
+     "demand_times": {"val": "1"}, 
+     "demand_types": {"val": "linear"}
+    }
+   }, 
+   "institution": {
+    "config": {
+     "MktDrivenInst": {
+      "amt_req": "10.0", 
+      "num_to_build": "3", 
+      "prototypes": {
+       "val": [
+        "Mine", 
+        "Enrichment", 
+        "LWRFuelFab", 
+        "SFRFuelFab", 
+        "LWR", 
+        "SFR", 
+        "LWRWetStorage", 
+        "SFRWetStorage", 
+        "LWRSeparations", 
+        "SFRSeparations", 
+        "Repository"
+       ]
+      }, 
+      "target_commod": "fresh_sfr_fuel", 
+      "target_fac": "SFR"
+     }
+    }, 
+    "initialfacilitylist": {
+     "entry": [
+      {"number": "1", "prototype": "Mine"}, 
+      {"number": "1", "prototype": "Enrichment"}, 
+      {"number": "1", "prototype": "LWRFuelFab"}, 
+      {"number": "1", "prototype": "SFRFuelFab"}, 
+      {"number": "1", "prototype": "LWRWetStorage"}, 
+      {"number": "1", "prototype": "SFRWetStorage"}, 
+      {"number": "1", "prototype": "LWRSeparations"}, 
+      {"number": "1", "prototype": "SFRSeparations"}, 
+      {"number": "100", "prototype": "LWR"}, 
+      {"number": "1", "prototype": "Repository"}
+     ]
+    }, 
+    "name": "SingleInstitution"
+   }, 
+   "name": "SingleRegion"
+  }
+ }
+}
