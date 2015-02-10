@@ -235,9 +235,11 @@ BASE_SIM = {
     }, 
     {
      "config": {
-      "DeployInst": 
-        "<buildorder><prototype>LWR</prototype><number>2</number><date>50</date></buildorder>\n"
-        "<buildorder><prototype>FRx</prototype><number>1</number><date>100</date></buildorder>"
+      "DeployInst": {"buildorder": [
+            "<prototype>LWR</prototype><number>2</number><date>5</date>",
+            "<prototype>FRx</prototype><number>1</number><date>10</date>",
+            ]
+        },
      }, 
      "name": "utility2"
     }
