@@ -1,9 +1,35 @@
 """Generates an input file for transitioning from EG01 -> EG23"""
 from __future__ import unicode_literals, print_function
+from math import ceil
+
 try:
     import simplejson as json
 except ImportError:
     import json
+
+# temporary hack using Bo Feng's reactor deployment schedule from DYMOND
+bo_deployment = {'LWR': [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
+        1, 1, 1, 6, 6, 7, 6, 6, 6, 6, 7, 6, 6, 2, 1, 1, 1, 2, 1, 1, 2, 1, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 3, 2, 
+        0, 3, 3, 4, 3, 1, 1, 2, 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0],
+    'FR': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 6.8, 6.4, 
+        6.8, 6.4, 6.8, 6.4, 6.8, 6.8, 6.4, 5.2, 0, 0, 0, 1.6, 2, 1.6, 2, 1.6, 
+        2, 2, 2, 1.6, 2, 2, 2, 2, 2, 2, 2.4, 2, 2, 2, 2.4, 2, 2.4, 3.2, 3.2, 0, 
+        0, 0, 0, 1.6, 3.2, 0.4, 0.4, 0.8, 0.4, 2, 3.2, 0.8, 0.8, 3.6, 9.6, 8.8, 
+        8.8, 8.4, 8.8, 10, 8.8, 8.8, 4.8, 3.6, 4, 4, 4.8, 4, 4, 5.2, 4, 4.8, 
+        4.8, 4.4, 4.8, 4.8, 4.4, 4.8, 5.2, 4.4, 5.2, 4.8, 10.4, 10, 10, 10, 
+        10.4, 10.4, 10.4, 10.4, 10, 11.2, 4.8, 6, 5.6, 5.6, 6, 5.6, 6.4, 5.6, 
+        6, 6.4, 6, 6, 6.4, 6.4, 6.4, 6.4, 6.4, 6.4, 7.2, 6.4, 6.8, 6.8, 7.2, 
+        6.8, 7.2, 8, 8.4, 8, 8, 9.2, 8, 8.8, 8.4, 8.8, 8.8, 10.4, 8.8, 8.4, 10, 
+        8.4, 14.4, 14.4, 15.2, 14.8, 14.8, 14.4, 14.8, 16, 15.2, 14.8, 11.2, 
+        10, 10.4, 10.4, 11.6, 10.4, 10.8, 12, 10.8, 11.6]}
 
 BASE_SIM = {
  "simulation": {
@@ -170,7 +196,7 @@ BASE_SIM = {
       "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
      }
     }, 
-    "name": "FRx"
+    "name": "FR"
    }, 
    {
     "config": {
@@ -237,7 +263,7 @@ BASE_SIM = {
      "config": {
       "DeployInst": {"buildorder": [
             "<prototype>LWR</prototype><number>2</number><date>5</date>",
-            "<prototype>FRx</prototype><number>1</number><date>10</date>",
+            "<prototype>FR</prototype><number>1</number><date>10</date>",
             ]
         },
      }, 
@@ -250,7 +276,21 @@ BASE_SIM = {
 }
 
 def make_simulation():
+    build_sched = []
+    lwr_xml = "<prototype>LWR</prototype><number>{0}</number><date>{1}</date>"
+    for i, n in enumerate(bo_deployment['LWR']):
+        if n == 0:
+            continue
+        build_sched.append(lwr_xml.format(n, i))
+    fr_xml = "<prototype>FR</prototype><number>{0}</number><date>{1}</date>"
+    for i, n in enumerate(bo_deployment['FR']):
+        if n == 0:
+            continue
+        build_sched.append(fr_xml.format(int(ceil(n)), i))
+     
+    BASE_SIM["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
     return BASE_SIM    
+
 
 def main():
     sim = make_simulation()
