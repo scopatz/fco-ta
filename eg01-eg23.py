@@ -8,7 +8,8 @@ except ImportError:
     import json
 
 # temporary hack using Bo Feng's reactor deployment schedule from DYMOND
-bo_deployment = {'LWR': [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
+bo_deployment = {'LWR': [0, 100, 0, 0, 0,  # expanding the timeline by five years at the beginning to match Bo's start time
+        0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
         1, 1, 1, 6, 6, 7, 6, 6, 6, 6, 7, 6, 6, 2, 1, 1, 1, 2, 1, 1, 2, 1, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 3, 2, 
@@ -17,7 +18,8 @@ bo_deployment = {'LWR': [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0],
-    'FR': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    'FR': [0, 0, 0, 0, 0,  # same thing
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 6.8, 6.4, 
         6.8, 6.4, 6.8, 6.4, 6.8, 6.8, 6.4, 5.2, 0, 0, 0, 1.6, 2, 1.6, 2, 1.6, 
@@ -62,7 +64,7 @@ BASE_SIM = {"simulation": {
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
     #"control": {"duration": 12 * 185, "startmonth": 1, "startyear": 2015}, 
-    "control": {"duration": 12 * 10, "startmonth": 1, "startyear": 2005}, 
+    "control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
     "facility": [
         {"name": "FR Fuel Fab",
          "config": {"FuelfabFacility": {
@@ -255,12 +257,12 @@ def make_simulation():
     for i, n in enumerate(bo_deployment['LWR']):
         if n == 0:
             continue
-        build_sched.append(lwr_xml.format(n, i))
+        build_sched.append(lwr_xml.format(n, i*12))
     fr_xml = "<prototype>FR</prototype><number>{0}</number><date>{1}</date>"
     for i, n in enumerate(bo_deployment['FR']):
         if n == 0:
             continue
-        build_sched.append(fr_xml.format(int(ceil(n)), i))
+        build_sched.append(fr_xml.format(int(ceil(n)), i*12))
      
     BASE_SIM["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
     return BASE_SIM    
