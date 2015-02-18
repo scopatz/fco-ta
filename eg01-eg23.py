@@ -136,117 +136,98 @@ BASE_SIM = {"simulation": {
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
-   {
-    "config": {
-     "ReactorFacility": {
-      "DA_mode": "0", 
-      "batches": "5", 
-      "burnupcalc_timestep": "10", 
-      "core_mass": "10", 
-      "cylindrical_delta": "5", 
-      "disadv_a": "0.40950", 
-      "disadv_b": "0.707490", 
-      "disadv_fuel_sigs": "0.430", 
-      "disadv_mod_siga": "0.2220", 
-      "disadv_mod_sigs": "3.440", 
-      "efficiency": "0.330", 
-      "flux_mode": "1", 
-      "fuel_Sig_tr": "3.940", 
-      "fuel_area": "89197", 
-      "generated_power": "1000.0", 
-      "in_commods": {"val": "FR Fuel"}, 
-      "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
-      "libraries": {"val": "FR50"}, 
-      "max_inv_size": "1.000000000000000E+299", 
-      "mod_Sig_a": "0.02220", 
-      "mod_Sig_f": "0.0", 
-      "mod_Sig_tr": "3.460", 
-      "mod_thickness": "100", 
-      "nonleakage": "0.57", 
-      "out_commod": "FR Spent Fuel", 
-      "reactor_life": "960", 
-      "target_burnup": "200", 
-      "tolerence": "0.0010", 
-      "CR_fissile": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
-     }
-    }, 
-    "name": "FR"
-   }, 
-   {
-    "config": {
-     "ReprocessFacility": {
-      "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
-      "in_commod": {"val": "FR Spent Fuel"}, 
-      "input_capacity": 2000000, 
-      "max_inv_size": "1.000000000000000E+299", 
-      "output_capacity": 200000, 
-      "repro_input_path": "hist/FR_reprocess.txt"
-     }
-    }, 
-    "name": "FR Reprocess"
-   }, 
-   {
-    "config": {
-     "Sink": {
-      "capacity": 10000000, 
-      "in_commods": {"val": "WASTE"}, 
-      "max_inv_size": "1.000000000000000E+299"
-     }
-    }, 
-    "name": "SINK"
-   }
-  ], 
-  "recipe": [
-   {
-    "basis": "mass", 
-    "name": "Uranium 238", 
-    "nuclide": {"comp": "100.0000002", "id": "922380"}
-   }, 
-   {
-    "basis": "mass", 
-    "name": "U235", 
-    "nuclide": {"comp": "100.0000002", "id": "922350"}
-   }, 
-   {
-    "basis": "mass", 
-    "name": "DU", 
-    "nuclide": [{"comp": "0.2500002", "id": "922350"}, {"comp": "99.7500002", "id": "922380"}]
-   }
-  ], 
-  "region": {
-   "name": "USA",
-   "config": {"NullRegion": None}, 
-   "institution": [
-    {
-     "name": "utility",
-     "config": {"NullInst": None}, 
-     "initialfacilitylist": {
-      "entry": [
-       {"number": 1, "prototype": "MineU235"}, 
-       {"number": 1, "prototype": "U238"}, 
-       {"number": 1, "prototype": "DU"}, 
-       {"number": 1, "prototype": "DU2"}, 
-       {"number": 1, "prototype": "LWR Fuel Fab"}, 
-       {"number": 1, "prototype": "LWR Seperation"}, 
-       {"number": 1, "prototype": "FR Reprocess"}, 
-       {"number": 1, "prototype": "SINK"}, 
-       {"number": 1, "prototype": "FR Fuel Fab"}
-      ]
-     }, 
-    }, 
-    {
-     "name": "utility2",
-     "config": {
-      "DeployInst": {"buildorder": [
-            "<prototype>LWR</prototype><number>2</number><date>5</date>",
-            "<prototype>FR</prototype><number>1</number><date>10</date>",
-            ]
-        },
-     }, 
+        {"name": "FR",
+         "config": {"ReactorFacility": {
+            "DA_mode": "0", 
+            "batches": "5", 
+            "burnupcalc_timestep": "10", 
+            "core_mass": "10", 
+            "cylindrical_delta": "5", 
+            "disadv_a": "0.40950", 
+            "disadv_b": "0.707490", 
+            "disadv_fuel_sigs": "0.430", 
+            "disadv_mod_siga": "0.2220", 
+            "disadv_mod_sigs": "3.440", 
+            "efficiency": "0.330", 
+            "flux_mode": "1", 
+            "fuel_Sig_tr": "3.940", 
+            "fuel_area": "89197", 
+            "generated_power": "1000.0", 
+            "in_commods": {"val": "FR Fuel"}, 
+            "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
+            "libraries": {"val": "FR50"}, 
+            "max_inv_size": "1.000000000000000E+299", 
+            "mod_Sig_a": "0.02220", 
+            "mod_Sig_f": "0.0", 
+            "mod_Sig_tr": "3.460", 
+            "mod_thickness": "100", 
+            "nonleakage": "0.57", 
+            "out_commod": "FR Spent Fuel", 
+            "reactor_life": "960", 
+            "target_burnup": "200", 
+            "tolerence": "0.0010", 
+            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
+                                   "942410", "942420"]}, 
+            }},}, 
+        {"name": "FR Reprocess",
+         "config": {"ReprocessFacility": {
+            "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
+            "in_commod": {"val": "FR Spent Fuel"}, 
+            "input_capacity": 2000000, 
+            "max_inv_size": "1.000000000000000E+299", 
+            "output_capacity": 200000, 
+            "repro_input_path": "hist/FR_reprocess.txt"
+            }},}, 
+        {"name": "SINK",
+         "config": {"Sink": {
+            "capacity": 10000000, 
+            "in_commods": {"val": "WASTE"}, 
+            "max_inv_size": "1.000000000000000E+299"
+            }},}
+        ], 
+    "recipe": [
+        {"name": "Uranium 238", 
+         "basis": "mass",
+         "nuclide": {"comp": "100.0000002", "id": "922380"}
+         }, 
+        {"name": "U235", 
+         "basis": "mass", 
+         "nuclide": {"comp": "100.0000002", "id": "922350"}
+         }, 
+        {"name": "DU", 
+         "basis": "mass", 
+         "nuclide": [{"comp": "0.2500002", "id": "922350"}, 
+                     {"comp": "99.7500002", "id": "922380"}]
+         }
+        ], 
+    "region": {
+        "name": "USA",
+        "config": {"NullRegion": None}, 
+        "institution": [
+            {"name": "utility",
+             "config": {"NullInst": None}, 
+             "initialfacilitylist": {"entry": [
+                {"number": 1, "prototype": "MineU235"}, 
+                {"number": 1, "prototype": "U238"}, 
+                {"number": 1, "prototype": "DU"}, 
+                {"number": 1, "prototype": "DU2"}, 
+                {"number": 1, "prototype": "LWR Fuel Fab"}, 
+                {"number": 1, "prototype": "LWR Seperation"}, 
+                {"number": 1, "prototype": "FR Reprocess"}, 
+                {"number": 1, "prototype": "SINK"}, 
+                {"number": 1, "prototype": "FR Fuel Fab"}
+                ]}, 
+             }, 
+            {"name": "utility2",
+             "config": {"DeployInst": {"buildorder": [
+                "<prototype>LWR</prototype><number>2</number><date>5</date>",
+                "<prototype>FR</prototype><number>1</number><date>10</date>",
+                ]},}, 
+             }
+            ], 
+        }
     }
-   ], 
-  }
-}}
+}
 
 def make_simulation():
     build_sched = []
