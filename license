@@ -22,3 +22,18 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+---------------
+
+The following files are not covered under the above copyright. Instead, 
+they are covered under the copyrights noted below:
+
+Copyright (c) 2014, Kathryn Dorsey Huff All rights reserved.
+
+* hist/forced-deploy.xml
+* hist/mktdriverinst-example.xml
+
+
+Copyright (c) 2014, Robert Flanagan, Cem Bagdatlioglu, Erich Schneider, All rights reserved.
+
+* hist/bl-real-amb.xml
+* hist/bl-two-stream-fr.xml
