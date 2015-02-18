@@ -75,18 +75,18 @@ BASE_SIM = {"simulation": {
             "out_commod": "FR Fuel"
             }},}, 
         {"name": "MineU235",
-         "config": {"Source": {"capacity": 4000, "commod": "U235", 
+         "config": {"Source": {"capacity": 4000000, "commod": "U235", 
                                "recipe_name": "U235"}},}, 
         {"name": "U238", 
-         "config": {"Source": {"capacity": 20000, "commod": "U238", 
+         "config": {"Source": {"capacity": 2000000, "commod": "U238", 
                                "recipe_name": "Uranium 238"}},}, 
         {"name": "DU",
-         "config": {"Source": {"capacity": 20000, "commod": "DU", 
+         "config": {"Source": {"capacity": 2000000, "commod": "DU", 
                                "recipe_name": "DU"}},}, 
         {"name": "DU2",
-         "config": {"Source": {"capacity": 20000, "commod": "DU2", 
+         "config": {"Source": {"capacity": 2000000, "commod": "DU2", 
                                "recipe_name": "DU"}},}, 
-        {"name": "LWR Fuel FAb",
+        {"name": "LWR Fuel Fab",
          "config": {"FuelfabFacility": {
             "fissle_stream": "U235", 
             "in_commods": {"key": "DU", "val": 0.0}, 
@@ -98,9 +98,9 @@ BASE_SIM = {"simulation": {
          "config": {"ReprocessFacility": {
             "commod_out": {"val": ["LWR Reprocessed", "WASTE"]}, 
             "in_commod": {"val": "LWR Spent Fuel"}, 
-            "input_capacity": 2000, 
+            "input_capacity": 2000000, 
             "max_inv_size": 1e299, 
-            "output_capacity": 2000, 
+            "output_capacity": 2000000, 
             "repro_input_path": "hist/FR_reprocess.txt"
             }},}, 
         {"name": "LWR",
@@ -133,10 +133,8 @@ BASE_SIM = {"simulation": {
             "reactor_life": 480, 
             "target_burnup": 45, 
             "tolerence": 0.0010, 
-            "trans_created": {"val": ["922350", "942380", "942390", "942400", 
-                                      "942410", "942420"]}, 
-            "trans_fission": {"val": ["922350", "942380", "942390", "942400", 
-                                      "942410", "942420"]}
+            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
+                                   "942410", "942420"]}, 
             }},}, 
    {
     "config": {
@@ -169,8 +167,7 @@ BASE_SIM = {"simulation": {
       "reactor_life": "960", 
       "target_burnup": "200", 
       "tolerence": "0.0010", 
-      "trans_created": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
-      "trans_fission": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}
+      "CR_fissile": {"val": ["922350", "942380", "942390", "942400", "942410", "942420"]}, 
      }
     }, 
     "name": "FR"
@@ -180,9 +177,9 @@ BASE_SIM = {"simulation": {
      "ReprocessFacility": {
       "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
       "in_commod": {"val": "FR Spent Fuel"}, 
-      "input_capacity": "2000", 
+      "input_capacity": 2000000, 
       "max_inv_size": "1.000000000000000E+299", 
-      "output_capacity": "2000", 
+      "output_capacity": 200000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
     }, 
@@ -191,7 +188,7 @@ BASE_SIM = {"simulation": {
    {
     "config": {
      "Sink": {
-      "capacity": "100000", 
+      "capacity": 10000000, 
       "in_commods": {"val": "WASTE"}, 
       "max_inv_size": "1.000000000000000E+299"
      }
@@ -229,7 +226,7 @@ BASE_SIM = {"simulation": {
        {"number": 1, "prototype": "U238"}, 
        {"number": 1, "prototype": "DU"}, 
        {"number": 1, "prototype": "DU2"}, 
-       {"number": 1, "prototype": "LWR Fuel FAb"}, 
+       {"number": 1, "prototype": "LWR Fuel Fab"}, 
        {"number": 1, "prototype": "LWR Seperation"}, 
        {"number": 1, "prototype": "FR Reprocess"}, 
        {"number": 1, "prototype": "SINK"}, 

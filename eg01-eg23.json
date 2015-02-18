@@ -122,7 +122,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 4000, 
+      "capacity": 4000000, 
       "commod": "U235", 
       "recipe_name": "U235"
      }
@@ -132,7 +132,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 20000, 
+      "capacity": 2000000, 
       "commod": "U238", 
       "recipe_name": "Uranium 238"
      }
@@ -142,7 +142,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 20000, 
+      "capacity": 2000000, 
       "commod": "DU", 
       "recipe_name": "DU"
      }
@@ -152,7 +152,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 20000, 
+      "capacity": 2000000, 
       "commod": "DU2", 
       "recipe_name": "DU"
      }
@@ -172,7 +172,7 @@
       "out_commod": "LWR Fuel"
      }
     }, 
-    "name": "LWR Fuel FAb"
+    "name": "LWR Fuel Fab"
    }, 
    {
     "config": {
@@ -186,9 +186,9 @@
       "in_commod": {
        "val": "LWR Spent Fuel"
       }, 
-      "input_capacity": 2000, 
+      "input_capacity": 2000000, 
       "max_inv_size": 1e+299, 
-      "output_capacity": 2000, 
+      "output_capacity": 2000000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
     }, 
@@ -197,6 +197,16 @@
    {
     "config": {
      "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
       "DA_mode": 0, 
       "batches": 3, 
       "burnupcalc_timestep": 10, 
@@ -231,8 +241,15 @@
       "out_commod": "LWR Spent Fuel", 
       "reactor_life": 480, 
       "target_burnup": 45, 
-      "tolerence": 0.001, 
-      "trans_created": {
+      "tolerence": 0.001
+     }
+    }, 
+    "name": "LWR"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
        "val": [
         "922350", 
         "942380", 
@@ -242,23 +259,6 @@
         "942420"
        ]
       }, 
-      "trans_fission": {
-       "val": [
-        "922350", 
-        "942380", 
-        "942390", 
-        "942400", 
-        "942410", 
-        "942420"
-       ]
-      }
-     }
-    }, 
-    "name": "LWR"
-   }, 
-   {
-    "config": {
-     "ReactorFacility": {
       "DA_mode": "0", 
       "batches": "5", 
       "burnupcalc_timestep": "10", 
@@ -293,27 +293,7 @@
       "out_commod": "FR Spent Fuel", 
       "reactor_life": "960", 
       "target_burnup": "200", 
-      "tolerence": "0.0010", 
-      "trans_created": {
-       "val": [
-        "922350", 
-        "942380", 
-        "942390", 
-        "942400", 
-        "942410", 
-        "942420"
-       ]
-      }, 
-      "trans_fission": {
-       "val": [
-        "922350", 
-        "942380", 
-        "942390", 
-        "942400", 
-        "942410", 
-        "942420"
-       ]
-      }
+      "tolerence": "0.0010"
      }
     }, 
     "name": "FR"
@@ -330,9 +310,9 @@
       "in_commod": {
        "val": "FR Spent Fuel"
       }, 
-      "input_capacity": "2000", 
+      "input_capacity": 2000000, 
       "max_inv_size": "1.000000000000000E+299", 
-      "output_capacity": "2000", 
+      "output_capacity": 200000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
     }, 
@@ -341,7 +321,7 @@
    {
     "config": {
      "Sink": {
-      "capacity": "100000", 
+      "capacity": 10000000, 
       "in_commods": {
        "val": "WASTE"
       }, 
@@ -412,7 +392,7 @@
        }, 
        {
         "number": 1, 
-        "prototype": "LWR Fuel FAb"
+        "prototype": "LWR Fuel Fab"
        }, 
        {
         "number": 1, 
