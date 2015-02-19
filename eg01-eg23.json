@@ -244,6 +244,7 @@
       "tolerence": 0.001
      }
     }, 
+    "lifetime": 960, 
     "name": "LWR"
    }, 
    {
@@ -296,6 +297,7 @@
       "tolerence": "0.0010"
      }
     }, 
+    "lifetime": 960, 
     "name": "FR"
    }, 
    {
