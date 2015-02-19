@@ -209,7 +209,7 @@
       }, 
       "DA_mode": 0, 
       "batches": 3, 
-      "burnupcalc_timestep": 10, 
+      "burnupcalc_timestep": 100, 
       "core_mass": 1000, 
       "cylindrical_delta": 5, 
       "disadv_a": 0.4095, 
@@ -260,9 +260,9 @@
         "942420"
        ]
       }, 
-      "DA_mode": "0", 
-      "batches": "5", 
-      "burnupcalc_timestep": "10", 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 100, 
       "core_mass": "10", 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
@@ -313,7 +313,7 @@
        "val": "FR Spent Fuel"
       }, 
       "input_capacity": 2000000, 
-      "max_inv_size": "1.000000000000000E+299", 
+      "max_inv_size": 1e+299, 
       "output_capacity": 200000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
@@ -338,7 +338,7 @@
     "basis": "mass", 
     "name": "Uranium 238", 
     "nuclide": {
-     "comp": "100.0000002", 
+     "comp": 100.0, 
      "id": "922380"
     }
    }, 
@@ -346,7 +346,7 @@
     "basis": "mass", 
     "name": "U235", 
     "nuclide": {
-     "comp": "100.0000002", 
+     "comp": 100.0, 
      "id": "922350"
     }
    }, 
@@ -355,11 +355,11 @@
     "name": "DU", 
     "nuclide": [
      {
-      "comp": "0.2500002", 
+      "comp": 0.25, 
       "id": "922350"
      }, 
      {
-      "comp": "99.7500002", 
+      "comp": 99.75, 
       "id": "922380"
      }
     ]

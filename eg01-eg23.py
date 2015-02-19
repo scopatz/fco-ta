@@ -108,7 +108,7 @@ BASE_SIM = {"simulation": {
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 3, 
-            "burnupcalc_timestep": 10, 
+            "burnupcalc_timestep": 100, 
             "core_mass": 1000, 
             "cylindrical_delta": 5, 
             "disadv_a": 0.40950, 
@@ -140,9 +140,9 @@ BASE_SIM = {"simulation": {
         {"name": "FR",
          "lifetime": 12*80,       
          "config": {"ReactorFacility": {
-            "DA_mode": "0", 
-            "batches": "5", 
-            "burnupcalc_timestep": "10", 
+            "DA_mode": 0, 
+            "batches": 5, 
+            "burnupcalc_timestep": 100, 
             "core_mass": "10", 
             "cylindrical_delta": "5", 
             "disadv_a": "0.40950", 
@@ -176,7 +176,7 @@ BASE_SIM = {"simulation": {
             "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
             "in_commod": {"val": "FR Spent Fuel"}, 
             "input_capacity": 2000000, 
-            "max_inv_size": "1.000000000000000E+299", 
+            "max_inv_size": 1.0E+299, 
             "output_capacity": 200000, 
             "repro_input_path": "hist/FR_reprocess.txt"
             }},}, 
@@ -190,16 +190,16 @@ BASE_SIM = {"simulation": {
     "recipe": [
         {"name": "Uranium 238", 
          "basis": "mass",
-         "nuclide": {"comp": "100.0000002", "id": "922380"}
+         "nuclide": {"comp": 100.0, "id": "922380"}
          }, 
         {"name": "U235", 
          "basis": "mass", 
-         "nuclide": {"comp": "100.0000002", "id": "922350"}
+         "nuclide": {"comp": 100.0, "id": "922350"}
          }, 
         {"name": "DU", 
          "basis": "mass", 
-         "nuclide": [{"comp": "0.2500002", "id": "922350"}, 
-                     {"comp": "99.7500002", "id": "922380"}]
+         "nuclide": [{"comp": 0.25, "id": "922350"}, 
+                     {"comp": 99.75, "id": "922380"}]
          }
         ], 
     "region": {
