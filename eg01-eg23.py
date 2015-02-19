@@ -104,6 +104,7 @@ BASE_SIM = {"simulation": {
             "repro_input_path": "hist/FR_reprocess.txt"
             }},}, 
         {"name": "LWR",
+         "lifetime": 12*80,   
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 3, 
@@ -137,6 +138,7 @@ BASE_SIM = {"simulation": {
                                    "942410", "942420"]}, 
             }},}, 
         {"name": "FR",
+         "lifetime": 12*80,       
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 5, 
