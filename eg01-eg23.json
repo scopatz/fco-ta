@@ -239,7 +239,7 @@
       "mod_thickness": 100, 
       "nonleakage": 0.98, 
       "out_commod": "LWR Spent Fuel", 
-      "reactor_life": 480, 
+      "reactor_life": 960, 
       "target_burnup": 45, 
       "tolerence": 0.001
      }
@@ -291,8 +291,8 @@
       "mod_thickness": "100", 
       "nonleakage": "0.57", 
       "out_commod": "FR Spent Fuel", 
-      "reactor_life": "960", 
-      "target_burnup": "200", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
       "tolerence": "0.0010"
      }
     }, 
