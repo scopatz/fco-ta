@@ -63,12 +63,13 @@ BASE_SIM = {"simulation": {
         {"name": "FR Fuel", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
-    #"control": {"duration": 12 * 200, "startmonth": 1, "startyear": 2005}, 
-    "control": {"duration": 12 * 60, "startmonth": 1, "startyear": 2005}, 
+    "control": {"duration": 12 * 200, "startmonth": 1, "startyear": 2005}, 
+    #"control": {"duration": 12 * 60, "startmonth": 1, "startyear": 2005}, 
     "facility": [
         {"name": "FR Fuel Fab",
          "config": {"FuelfabFacility": {
             "fissle_stream": "LWR Reprocessed", 
+            #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
             "in_commods": {"key": "FR Reprocessed", "val": 0.0}, 
             "maximum_storage": 1e60, 
             "non_fissle_stream": "DU2", 
@@ -108,7 +109,7 @@ BASE_SIM = {"simulation": {
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 3, 
-            "burnupcalc_timestep": 100, 
+            "burnupcalc_timestep": 200, 
             "core_mass": 1000, 
             "cylindrical_delta": 5, 
             "disadv_a": 0.40950, 
@@ -142,7 +143,7 @@ BASE_SIM = {"simulation": {
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 5, 
-            "burnupcalc_timestep": 100, 
+            "burnupcalc_timestep": 200, 
             "core_mass": "10", 
             "cylindrical_delta": "5", 
             "disadv_a": "0.40950", 
