@@ -7,9 +7,12 @@ try:
 except ImportError:
     import json
 
-# temporary hack using Bo Feng's reactor deployment schedule from DYMOND
-bo_deployment = {'LWR': [0, 100, 0, 0, 0,  # expanding the timeline by five years at the beginning to match Bo's start time
-        0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
+# temporary hack using Bo Feng's reactor deployment schedule from DYMOND, 
+# assuming deployment of 100 LWRs between 1965 and 2015, at 2 reactors/year
+bo_deployment = {'LWR': [2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
         1, 1, 1, 6, 6, 7, 6, 6, 6, 6, 7, 6, 6, 2, 1, 1, 1, 2, 1, 1, 2, 1, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 4, 3, 2, 
@@ -18,10 +21,12 @@ bo_deployment = {'LWR': [0, 100, 0, 0, 0,  # expanding the timeline by five year
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0],
-    'FR': [0, 0, 0, 0, 0,  # same thing
+    'FR': [0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-        0, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 6.8, 6.4, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, #first FR deployed in 2050 
+        1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 1.2, 1.6, 1.6, 6.8, 6.4, 
         6.8, 6.4, 6.8, 6.4, 6.8, 6.8, 6.4, 5.2, 0, 0, 0, 1.6, 2, 1.6, 2, 1.6, 
         2, 2, 2, 1.6, 2, 2, 2, 2, 2, 2, 2.4, 2, 2, 2, 2.4, 2, 2.4, 3.2, 3.2, 0, 
         0, 0, 0, 1.6, 3.2, 0.4, 0.4, 0.8, 0.4, 2, 3.2, 0.8, 0.8, 3.6, 9.6, 8.8, 
@@ -63,8 +68,8 @@ BASE_SIM = {"simulation": {
         {"name": "FR Fuel", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
-    #"control": {"duration": 12 * 200, "startmonth": 1, "startyear": 2005}, 
-    "control": {"duration": 12 * 100, "startmonth": 1, "startyear": 2005}, 
+    "control": {"duration": 12 * 100, "startmonth": 1, "startyear": 1965}, 
+    #"control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
     "facility": [
         {"name": "FR Fuel Fab",
          "config": {"FuelfabFacility": {
@@ -134,7 +139,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "LWR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 45, 
-            "tolerence": 0.0010, 
+            "tolerence": 0.0010, #gaaaah spelling
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
@@ -168,7 +173,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "FR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 200, 
-            "tolerence": "0.0010", 
+            "tolerence": "0.0010", #can I correct this already? 
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
