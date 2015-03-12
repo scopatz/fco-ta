@@ -9,7 +9,7 @@ except ImportError:
 
 # temporary hack using Bo Feng's reactor deployment schedule from DYMOND, 
 # assuming deployment of 100 LWRs between 1965 and 2015, at 2 reactors/year
-bo_deployment = {'LWR': [2, 2,
+bo_deployment = {'LWR': [0, 2, 2,
         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 
@@ -21,7 +21,7 @@ bo_deployment = {'LWR': [2, 2,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0],
-    'FR': [0, 0,
+    'FR': [0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -68,7 +68,7 @@ BASE_SIM = {"simulation": {
         {"name": "FR Fuel", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
-    "control": {"duration": 12 * 100, "startmonth": 1, "startyear": 1965}, 
+    "control": {"duration": 12 * 100, "startmonth": 1, "startyear": 1964}, 
     #"control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
     "facility": [
         {"name": "FR Fuel Fab",
@@ -139,7 +139,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "LWR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 45, 
-            "tolerence": 0.0010, #gaaaah spelling
+            "tolerance": 0.0010, #gaaaah spelling
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
@@ -173,7 +173,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "FR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 200, 
-            "tolerence": "0.0010", #can I correct this already? 
+            "tolerance": "0.0010", #can I correct this already? 
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
