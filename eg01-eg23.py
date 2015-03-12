@@ -68,7 +68,7 @@ BASE_SIM = {"simulation": {
         {"name": "FR Fuel", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
-    "control": {"duration": 12 * 100, "startmonth": 1, "startyear": 1964}, 
+    "control": {"duration": 12 * 150, "startmonth": 1, "startyear": 1964}, 
     #"control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
     "facility": [
         {"name": "FR Fuel Fab",
