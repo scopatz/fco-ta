@@ -102,7 +102,8 @@ BASE_SIM = {"simulation": {
          "config": {"FuelfabFacility": {
             "fissle_stream": "LWR Reprocessed", 
             #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
-            "in_commods": {"key": "FR Reprocessed", "val": 0.0}, 
+            #"in_commods": {"key": "FR Reprocessed", "val": 0.0},
+            "in_commods": {"key": "FR Reprocessed", "val": 1.0},
             "maximum_storage": 1e60, 
             "non_fissle_stream": "DU2", 
             "out_commod": "FR Fuel"
@@ -166,7 +167,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "LWR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 45, 
-            "tolerance": 0.0010, #gaaaah spelling
+            "tolerance": 0.0010, 
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
@@ -200,7 +201,7 @@ BASE_SIM = {"simulation": {
             "out_commod": "FR Spent Fuel", 
             "reactor_life": 960, 
             "target_burnup": 200, 
-            "tolerance": "0.0010", #can I correct this already? 
+            "tolerance": "0.0010",
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 

@@ -110,7 +110,7 @@
       "fissle_stream": "LWR Reprocessed", 
       "in_commods": {
        "key": "FR Reprocessed", 
-       "val": 0.0
+       "val": 1.0
       }, 
       "maximum_storage": 1e+60, 
       "non_fissle_stream": "DU2", 
