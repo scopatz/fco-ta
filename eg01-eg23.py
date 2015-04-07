@@ -1,6 +1,7 @@
 """Generates an input file for transitioning from EG01 -> EG23"""
 from __future__ import unicode_literals, print_function
 from math import ceil
+from copy import deepcopy
 
 try:
     import simplejson as json
@@ -171,40 +172,6 @@ BASE_SIM = {"simulation": {
             "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
                                    "942410", "942420"]}, 
             }},}, 
-        {"name": "FR",
-         "lifetime": 12*80,       
-         "config": {"ReactorFacility": {
-            "DA_mode": 0, 
-            "batches": 5, 
-            "burnupcalc_timestep": 200, 
-            "core_mass": "10", 
-            "cylindrical_delta": "5", 
-            "disadv_a": "0.40950", 
-            "disadv_b": "0.707490", 
-            "disadv_fuel_sigs": "0.430", 
-            "disadv_mod_siga": "0.2220", 
-            "disadv_mod_sigs": "3.440", 
-            "efficiency": "0.330", 
-            "flux_mode": "1", 
-            "fuel_Sig_tr": "3.940", 
-            "fuel_area": "89197", 
-            "generated_power": "400.0", 
-            "in_commods": {"val": "FR Fuel"}, 
-            "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
-            "libraries": {"val": "FR50"}, 
-            "max_inv_size": "1.000000000000000E+299", 
-            "mod_Sig_a": "0.02220", 
-            "mod_Sig_f": "0.0", 
-            "mod_Sig_tr": "3.460", 
-            "mod_thickness": "100", 
-            "nonleakage": "0.57", 
-            "out_commod": "FR Spent Fuel", 
-            "reactor_life": 960, 
-            "target_burnup": 200, 
-            "tolerance": "0.0010",
-            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
-                                   "942410", "942420"]}, 
-            }},}, 
         {"name": "FR Reprocess",
          "config": {"ReprocessFacility": {
             "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
@@ -265,6 +232,51 @@ BASE_SIM = {"simulation": {
     }
 }
 
+FACILITIES = BASE_SIM['simulation']['facility']
+
+FR = {"name": "FR",
+         "lifetime": 12*80,       
+         "config": {"ReactorFacility": {
+            "DA_mode": 0, 
+            "batches": 5, 
+            "burnupcalc_timestep": 200, 
+            "core_mass": 10, 
+            "cylindrical_delta": "5", 
+            "disadv_a": "0.40950", 
+            "disadv_b": "0.707490", 
+            "disadv_fuel_sigs": "0.430", 
+            "disadv_mod_siga": "0.2220", 
+            "disadv_mod_sigs": "3.440", 
+            "efficiency": "0.330", 
+            "flux_mode": "1", 
+            "fuel_Sig_tr": "3.940", 
+            "fuel_area": "89197", 
+            "generated_power": 400.0, 
+            "in_commods": {"val": "FR Fuel"}, 
+            "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
+            "libraries": {"val": "FR50"}, 
+            "max_inv_size": 1E+299, 
+            "mod_Sig_a": "0.02220", 
+            "mod_Sig_f": "0.0", 
+            "mod_Sig_tr": "3.460", 
+            "mod_thickness": "100", 
+            "nonleakage": "0.57", 
+            "out_commod": "FR Spent Fuel", 
+            "reactor_life": 960, 
+            "target_burnup": 200, 
+            "tolerance": "0.0010",
+            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
+                                   "942410", "942420"]}, 
+            }},}
+
+for n in range(1, int(max(bo_deployment['FR']) / 0.4) + 1):
+    frn = deepcopy(FR)
+    frn['name'] += str(n)
+    frn['config']['ReactorFacility']['core_mass'] *= n
+    frn['config']['ReactorFacility']['generated_power'] *= n
+    FACILITIES.append(frn)
+
+
 def make_simulation():
     build_sched = []
     lwr_xml = "<prototype>LWR</prototype><number>{0}</number><date>{1}</date>"
@@ -272,12 +284,12 @@ def make_simulation():
         if n == 0:
             continue
         build_sched.append(lwr_xml.format(n, i*12))
-    fr_xml = "<prototype>FR</prototype><number>{0}</number><date>{1}</date>"
+    fr_xml = "<prototype>FR{0}</prototype><number>1</number><date>{1}</date>"
     for i, n in enumerate(bo_deployment['FR']):
+        n = int(n / 0.4)
         if n == 0:
             continue
-        build_sched.append(fr_xml.format(int(ceil(n)), i*12))
-     
+        build_sched.append(fr_xml.format(n, i*12))
     BASE_SIM["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
     return BASE_SIM    
 

@@ -249,59 +249,6 @@
    }, 
    {
     "config": {
-     "ReactorFacility": {
-      "CR_fissile": {
-       "val": [
-        "922350", 
-        "942380", 
-        "942390", 
-        "942400", 
-        "942410", 
-        "942420"
-       ]
-      }, 
-      "DA_mode": 0, 
-      "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": "10", 
-      "cylindrical_delta": "5", 
-      "disadv_a": "0.40950", 
-      "disadv_b": "0.707490", 
-      "disadv_fuel_sigs": "0.430", 
-      "disadv_mod_siga": "0.2220", 
-      "disadv_mod_sigs": "3.440", 
-      "efficiency": "0.330", 
-      "flux_mode": "1", 
-      "fuel_Sig_tr": "3.940", 
-      "fuel_area": "89197", 
-      "generated_power": "400.0", 
-      "in_commods": {
-       "val": "FR Fuel"
-      }, 
-      "interpol_pairs": {
-       "key": "BURNUP", 
-       "val": "42"
-      }, 
-      "libraries": {
-       "val": "FR50"
-      }, 
-      "max_inv_size": "1.000000000000000E+299", 
-      "mod_Sig_a": "0.02220", 
-      "mod_Sig_f": "0.0", 
-      "mod_Sig_tr": "3.460", 
-      "mod_thickness": "100", 
-      "nonleakage": "0.57", 
-      "out_commod": "FR Spent Fuel", 
-      "reactor_life": 960, 
-      "target_burnup": 200, 
-      "tolerance": "0.0010"
-     }
-    }, 
-    "lifetime": 960, 
-    "name": "FR"
-   }, 
-   {
-    "config": {
      "ReprocessFacility": {
       "commod_out": {
        "val": [
@@ -331,6 +278,2126 @@
      }
     }, 
     "name": "SINK"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 10, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR1"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 20, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR2"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 30, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 1200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR3"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 40, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 1600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR4"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 50, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 2000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR5"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 60, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 2400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR6"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 70, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 2800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR7"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 80, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 3200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR8"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 90, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 3600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR9"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 100, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 4000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR10"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 110, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 4400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR11"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 120, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 4800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR12"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 130, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 5200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR13"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 140, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 5600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR14"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 150, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 6000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR15"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 160, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 6400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR16"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 170, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 6800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR17"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 180, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 7200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR18"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 190, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 7600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR19"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 200, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 8000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR20"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 210, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 8400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR21"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 220, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 8800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR22"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 230, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 9200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR23"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 240, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 9600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR24"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 250, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 10000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR25"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 260, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 10400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR26"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 270, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 10800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR27"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 280, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 11200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR28"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 290, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 11600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR29"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 300, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 12000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR30"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 310, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 12400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR31"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 320, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 12800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR32"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 330, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 13200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR33"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 340, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 13600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR34"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 350, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 14000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR35"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 360, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 14400.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR36"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 370, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 14800.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR37"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 380, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 15200.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR38"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 390, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 15600.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR39"
+   }, 
+   {
+    "config": {
+     "ReactorFacility": {
+      "CR_fissile": {
+       "val": [
+        "922350", 
+        "942380", 
+        "942390", 
+        "942400", 
+        "942410", 
+        "942420"
+       ]
+      }, 
+      "DA_mode": 0, 
+      "batches": 5, 
+      "burnupcalc_timestep": 200, 
+      "core_mass": 400, 
+      "cylindrical_delta": "5", 
+      "disadv_a": "0.40950", 
+      "disadv_b": "0.707490", 
+      "disadv_fuel_sigs": "0.430", 
+      "disadv_mod_siga": "0.2220", 
+      "disadv_mod_sigs": "3.440", 
+      "efficiency": "0.330", 
+      "flux_mode": "1", 
+      "fuel_Sig_tr": "3.940", 
+      "fuel_area": "89197", 
+      "generated_power": 16000.0, 
+      "in_commods": {
+       "val": "FR Fuel"
+      }, 
+      "interpol_pairs": {
+       "key": "BURNUP", 
+       "val": "42"
+      }, 
+      "libraries": {
+       "val": "FR50"
+      }, 
+      "max_inv_size": 1e+299, 
+      "mod_Sig_a": "0.02220", 
+      "mod_Sig_f": "0.0", 
+      "mod_Sig_tr": "3.460", 
+      "mod_thickness": "100", 
+      "nonleakage": "0.57", 
+      "out_commod": "FR Spent Fuel", 
+      "reactor_life": 960, 
+      "target_burnup": 200, 
+      "tolerance": "0.0010"
+     }
+    }, 
+    "lifetime": 960, 
+    "name": "FR40"
    }
   ], 
   "recipe": [
@@ -515,164 +2582,164 @@
         "<prototype>LWR</prototype><number>3</number><date>1716</date>", 
         "<prototype>LWR</prototype><number>1</number><date>1728</date>", 
         "<prototype>LWR</prototype><number>5</number><date>1752</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1020</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1032</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1044</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1056</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1068</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1080</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1092</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1104</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1116</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1128</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1140</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1152</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1164</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1176</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1188</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1200</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1212</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1224</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1236</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1248</date>", 
-        "<prototype>FR</prototype><number>7</number><date>1260</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1272</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1284</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1296</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1308</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1320</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1332</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1344</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1356</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1368</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1380</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1392</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1404</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1416</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1428</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1440</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1452</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1464</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1476</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1488</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1500</date>", 
-        "<prototype>FR</prototype><number>3</number><date>1512</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1524</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1536</date>", 
-        "<prototype>FR</prototype><number>3</number><date>1548</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1560</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1572</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1584</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1596</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1656</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1668</date>", 
-        "<prototype>FR</prototype><number>1</number><date>1680</date>", 
-        "<prototype>FR</prototype><number>1</number><date>1692</date>", 
-        "<prototype>FR</prototype><number>1</number><date>1704</date>", 
-        "<prototype>FR</prototype><number>1</number><date>1716</date>", 
-        "<prototype>FR</prototype><number>2</number><date>1728</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1740</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1752</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1764</date>", 
-        "<prototype>FR</prototype><number>10</number><date>1776</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1788</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1800</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1812</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1824</date>", 
-        "<prototype>FR</prototype><number>10</number><date>1836</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1848</date>", 
-        "<prototype>FR</prototype><number>9</number><date>1860</date>", 
-        "<prototype>FR</prototype><number>5</number><date>1872</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1884</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1896</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1908</date>", 
-        "<prototype>FR</prototype><number>5</number><date>1920</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1932</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1944</date>", 
-        "<prototype>FR</prototype><number>6</number><date>1956</date>", 
-        "<prototype>FR</prototype><number>4</number><date>1968</date>", 
-        "<prototype>FR</prototype><number>5</number><date>1980</date>", 
-        "<prototype>FR</prototype><number>5</number><date>1992</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2004</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2016</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2028</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2040</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2052</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2064</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2076</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2088</date>", 
-        "<prototype>FR</prototype><number>5</number><date>2100</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2112</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2124</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2136</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2148</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2160</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2172</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2184</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2196</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2208</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2220</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2232</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2244</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2256</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2268</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2280</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2292</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2304</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2316</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2328</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2340</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2352</date>", 
-        "<prototype>FR</prototype><number>6</number><date>2364</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2376</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2388</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2400</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2412</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2424</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2436</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2448</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2460</date>", 
-        "<prototype>FR</prototype><number>8</number><date>2472</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2484</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2496</date>", 
-        "<prototype>FR</prototype><number>8</number><date>2508</date>", 
-        "<prototype>FR</prototype><number>7</number><date>2520</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2532</date>", 
-        "<prototype>FR</prototype><number>8</number><date>2544</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2556</date>", 
-        "<prototype>FR</prototype><number>8</number><date>2568</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2580</date>", 
-        "<prototype>FR</prototype><number>8</number><date>2592</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2604</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2616</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2628</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2640</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2652</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2664</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2676</date>", 
-        "<prototype>FR</prototype><number>9</number><date>2688</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2700</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2712</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2724</date>", 
-        "<prototype>FR</prototype><number>16</number><date>2736</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2748</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2760</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2772</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2784</date>", 
-        "<prototype>FR</prototype><number>16</number><date>2796</date>", 
-        "<prototype>FR</prototype><number>16</number><date>2808</date>", 
-        "<prototype>FR</prototype><number>15</number><date>2820</date>", 
-        "<prototype>FR</prototype><number>12</number><date>2832</date>", 
-        "<prototype>FR</prototype><number>10</number><date>2844</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2856</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2868</date>", 
-        "<prototype>FR</prototype><number>12</number><date>2880</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2892</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2904</date>", 
-        "<prototype>FR</prototype><number>12</number><date>2916</date>", 
-        "<prototype>FR</prototype><number>11</number><date>2928</date>", 
-        "<prototype>FR</prototype><number>12</number><date>2940</date>", 
-        "<prototype>FR</prototype><number>12</number><date>2952</date>"
+        "<prototype>FR4</prototype><number>1</number><date>1020</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1032</date>", 
+        "<prototype>FR2</prototype><number>1</number><date>1044</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1056</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1068</date>", 
+        "<prototype>FR2</prototype><number>1</number><date>1080</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1092</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1104</date>", 
+        "<prototype>FR2</prototype><number>1</number><date>1116</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1128</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1140</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1152</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>1164</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1176</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>1188</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1200</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>1212</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1224</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1236</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>1248</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>1260</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1272</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1284</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1296</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1308</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1320</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1332</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1344</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1356</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1368</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1380</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1392</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1404</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1416</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1428</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1440</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1452</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1464</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1476</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1488</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1500</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1512</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1524</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1536</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1548</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1560</date>", 
+        "<prototype>FR8</prototype><number>1</number><date>1572</date>", 
+        "<prototype>FR8</prototype><number>1</number><date>1584</date>", 
+        "<prototype>FR8</prototype><number>1</number><date>1596</date>", 
+        "<prototype>FR5</prototype><number>1</number><date>1656</date>", 
+        "<prototype>FR8</prototype><number>1</number><date>1668</date>", 
+        "<prototype>FR1</prototype><number>1</number><date>1680</date>", 
+        "<prototype>FR2</prototype><number>1</number><date>1692</date>", 
+        "<prototype>FR1</prototype><number>1</number><date>1704</date>", 
+        "<prototype>FR2</prototype><number>1</number><date>1716</date>", 
+        "<prototype>FR4</prototype><number>1</number><date>1728</date>", 
+        "<prototype>FR9</prototype><number>1</number><date>1740</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1752</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>1764</date>", 
+        "<prototype>FR23</prototype><number>1</number><date>1776</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>1788</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>1800</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>1812</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>1824</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>1836</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>1848</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>1860</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>1872</date>", 
+        "<prototype>FR9</prototype><number>1</number><date>1884</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1896</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1908</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>1920</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1932</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1944</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>1956</date>", 
+        "<prototype>FR10</prototype><number>1</number><date>1968</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>1980</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>1992</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2004</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2016</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2028</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2040</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2052</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2064</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2076</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2088</date>", 
+        "<prototype>FR11</prototype><number>1</number><date>2100</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2112</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>2124</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>2136</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>2148</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2160</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2172</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2184</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2196</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>2208</date>", 
+        "<prototype>FR27</prototype><number>1</number><date>2220</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2232</date>", 
+        "<prototype>FR15</prototype><number>1</number><date>2244</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2256</date>", 
+        "<prototype>FR15</prototype><number>1</number><date>2268</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2280</date>", 
+        "<prototype>FR15</prototype><number>1</number><date>2292</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2304</date>", 
+        "<prototype>FR15</prototype><number>1</number><date>2316</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2328</date>", 
+        "<prototype>FR13</prototype><number>1</number><date>2340</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2352</date>", 
+        "<prototype>FR15</prototype><number>1</number><date>2364</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2376</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2388</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2400</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2412</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2424</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>2436</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2448</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>2460</date>", 
+        "<prototype>FR18</prototype><number>1</number><date>2472</date>", 
+        "<prototype>FR16</prototype><number>1</number><date>2484</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>2496</date>", 
+        "<prototype>FR18</prototype><number>1</number><date>2508</date>", 
+        "<prototype>FR17</prototype><number>1</number><date>2520</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>2532</date>", 
+        "<prototype>FR20</prototype><number>1</number><date>2544</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>2556</date>", 
+        "<prototype>FR20</prototype><number>1</number><date>2568</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2580</date>", 
+        "<prototype>FR20</prototype><number>1</number><date>2592</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>2604</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2616</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>2628</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2640</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2652</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2664</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2676</date>", 
+        "<prototype>FR21</prototype><number>1</number><date>2688</date>", 
+        "<prototype>FR22</prototype><number>1</number><date>2700</date>", 
+        "<prototype>FR36</prototype><number>1</number><date>2712</date>", 
+        "<prototype>FR36</prototype><number>1</number><date>2724</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2736</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2748</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2760</date>", 
+        "<prototype>FR36</prototype><number>1</number><date>2772</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2784</date>", 
+        "<prototype>FR40</prototype><number>1</number><date>2796</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2808</date>", 
+        "<prototype>FR37</prototype><number>1</number><date>2820</date>", 
+        "<prototype>FR27</prototype><number>1</number><date>2832</date>", 
+        "<prototype>FR25</prototype><number>1</number><date>2844</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2856</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2868</date>", 
+        "<prototype>FR28</prototype><number>1</number><date>2880</date>", 
+        "<prototype>FR26</prototype><number>1</number><date>2892</date>", 
+        "<prototype>FR27</prototype><number>1</number><date>2904</date>", 
+        "<prototype>FR30</prototype><number>1</number><date>2916</date>", 
+        "<prototype>FR27</prototype><number>1</number><date>2928</date>", 
+        "<prototype>FR28</prototype><number>1</number><date>2940</date>", 
+        "<prototype>FR30</prototype><number>1</number><date>2952</date>"
        ]
       }
      }, 
