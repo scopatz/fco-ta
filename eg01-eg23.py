@@ -104,7 +104,7 @@ BASE_SIM = {"simulation": {
             "fissle_stream": "LWR Reprocessed", 
             #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
             #"in_commods": {"key": "FR Reprocessed", "val": 0.0},
-            "in_commods": {"key": "FR Reprocessed", "val": 0.5},
+            "in_commods": {"key": "FR Reprocessed", "val": 1.0},
             "maximum_storage": 1e60, 
             "non_fissle_stream": "DU2", 
             "out_commod": "FR Fuel"
