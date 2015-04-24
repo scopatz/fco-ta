@@ -122,7 +122,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 4000000, 
+      "capacity": 4000000000, 
       "commod": "U235", 
       "recipe_name": "U235"
      }
@@ -132,7 +132,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 2000000, 
+      "capacity": 2000000000, 
       "commod": "U238", 
       "recipe_name": "Uranium 238"
      }
@@ -142,7 +142,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 2000000, 
+      "capacity": 2000000000, 
       "commod": "DU", 
       "recipe_name": "DU"
      }
@@ -152,7 +152,7 @@
    {
     "config": {
      "Source": {
-      "capacity": 2000000, 
+      "capacity": 2000000000, 
       "commod": "DU2", 
       "recipe_name": "DU"
      }
@@ -186,9 +186,9 @@
       "in_commod": {
        "val": "LWR Spent Fuel"
       }, 
-      "input_capacity": 2000000, 
+      "input_capacity": 2000000000, 
       "max_inv_size": 1e+299, 
-      "output_capacity": 2000000, 
+      "output_capacity": 2000000000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
     }, 
@@ -209,8 +209,8 @@
       }, 
       "DA_mode": 0, 
       "batches": 3, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 1000, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 35000, 
       "cylindrical_delta": 5, 
       "disadv_a": 0.4095, 
       "disadv_b": 0.70749, 
@@ -259,9 +259,9 @@
       "in_commod": {
        "val": "FR Spent Fuel"
       }, 
-      "input_capacity": 2000000, 
+      "input_capacity": 20000000, 
       "max_inv_size": 1e+299, 
-      "output_capacity": 200000, 
+      "output_capacity": 20000000, 
       "repro_input_path": "hist/FR_reprocess.txt"
      }
     }, 
@@ -270,7 +270,7 @@
    {
     "config": {
      "Sink": {
-      "capacity": 10000000, 
+      "capacity": 100000000, 
       "in_commods": {
        "val": "WASTE"
       }, 
@@ -292,10 +292,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 10, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 3000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -322,7 +323,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -345,10 +346,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 20, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 6000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -375,7 +377,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -398,10 +400,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 30, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 9000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -428,7 +431,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -451,10 +454,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 40, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 12000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -481,7 +485,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -504,10 +508,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 50, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 15000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -534,7 +539,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -557,10 +562,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 60, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 18000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -587,7 +593,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -610,10 +616,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 70, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 21000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -640,7 +647,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -663,10 +670,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 80, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 24000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -693,7 +701,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -716,10 +724,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 90, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 27000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -746,7 +755,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -769,10 +778,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 100, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 30000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -799,7 +809,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -822,10 +832,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 110, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 33000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -852,7 +863,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -875,10 +886,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 120, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 36000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -905,7 +917,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -928,10 +940,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 130, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 39000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -958,7 +971,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -981,10 +994,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 140, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 42000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1011,7 +1025,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1034,10 +1048,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 150, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 45000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1064,7 +1079,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1087,10 +1102,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 160, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 48000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1117,7 +1133,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1140,10 +1156,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 170, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 51000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1170,7 +1187,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1193,10 +1210,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 180, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 54000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1223,7 +1241,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1246,10 +1264,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 190, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 57000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1276,7 +1295,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1299,10 +1318,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 200, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 60000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1329,7 +1349,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1352,10 +1372,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 210, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 63000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1382,7 +1403,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1405,10 +1426,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 220, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 66000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1435,7 +1457,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1458,10 +1480,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 230, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 69000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1488,7 +1511,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1511,10 +1534,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 240, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 72000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1541,7 +1565,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1564,10 +1588,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 250, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 75000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1594,7 +1619,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1617,10 +1642,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 260, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 78000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1647,7 +1673,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1670,10 +1696,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 270, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 81000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1700,7 +1727,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1723,10 +1750,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 280, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 84000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1753,7 +1781,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1776,10 +1804,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 290, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 87000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1806,7 +1835,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1829,10 +1858,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 300, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 90000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1859,7 +1889,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1882,10 +1912,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 310, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 93000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1912,7 +1943,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1935,10 +1966,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 320, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 96000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -1965,7 +1997,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -1988,10 +2020,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 330, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 99000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2018,7 +2051,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2041,10 +2074,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 340, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 102000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2071,7 +2105,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2094,10 +2128,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 350, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 105000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2124,7 +2159,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2147,10 +2182,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 360, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 108000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2177,7 +2213,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2200,10 +2236,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 370, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 111000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2230,7 +2267,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2253,10 +2290,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 380, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 114000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2283,7 +2321,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2306,10 +2344,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 390, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 117000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2336,7 +2375,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
@@ -2359,10 +2398,11 @@
         "942420"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
       "batches": 5, 
-      "burnupcalc_timestep": 200, 
-      "core_mass": 400, 
+      "burnupcalc_timestep": 50, 
+      "core_mass": 120000, 
       "cylindrical_delta": "5", 
       "disadv_a": "0.40950", 
       "disadv_b": "0.707490", 
@@ -2389,7 +2429,7 @@
       "mod_Sig_f": "0.0", 
       "mod_Sig_tr": "3.460", 
       "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "nonleakage": 0.8, 
       "out_commod": "FR Spent Fuel", 
       "reactor_life": 960, 
       "target_burnup": 200, 
