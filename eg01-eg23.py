@@ -103,22 +103,22 @@ BASE_SIM = {"simulation": {
             "fissle_stream": "LWR Reprocessed", 
             #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
             #"in_commods": {"key": "FR Reprocessed", "val": 0.0},
-            "in_commods": {"key": "FR Reprocessed", "val": 0.25},
+            "in_commods": {"key": "FR Reprocessed", "val": 1.0},
             "maximum_storage": 1e60, 
             "non_fissle_stream": "DU2", 
             "out_commod": "FR Fuel"
             }},}, 
         {"name": "MineU235",
-         "config": {"Source": {"capacity": 4000000, "commod": "U235", 
+         "config": {"Source": {"capacity": 40000000, "commod": "U235", 
                                "recipe_name": "U235"}},}, 
         {"name": "U238", 
-         "config": {"Source": {"capacity": 2000000, "commod": "U238", 
+         "config": {"Source": {"capacity": 20000000, "commod": "U238", 
                                "recipe_name": "Uranium 238"}},}, 
         {"name": "DU",
-         "config": {"Source": {"capacity": 2000000, "commod": "DU", 
+         "config": {"Source": {"capacity": 20000000, "commod": "DU", 
                                "recipe_name": "DU"}},}, 
         {"name": "DU2",
-         "config": {"Source": {"capacity": 2000000, "commod": "DU2", 
+         "config": {"Source": {"capacity": 20000000, "commod": "DU2", 
                                "recipe_name": "DU"}},}, 
         {"name": "LWR Fuel Fab",
          "config": {"FuelfabFacility": {
@@ -132,9 +132,9 @@ BASE_SIM = {"simulation": {
          "config": {"ReprocessFacility": {
             "commod_out": {"val": ["LWR Reprocessed", "WASTE"]}, 
             "in_commod": {"val": "LWR Spent Fuel"}, 
-            "input_capacity": 2000000, 
+            "input_capacity": 20000000, 
             "max_inv_size": 1e299, 
-            "output_capacity": 2000000, 
+            "output_capacity": 20000000, 
             "repro_input_path": "hist/FR_reprocess.txt"
             }},}, 
         {"name": "LWR",
@@ -143,7 +143,7 @@ BASE_SIM = {"simulation": {
             "DA_mode": 0, 
             "batches": 3, 
             "burnupcalc_timestep": 200, 
-            "core_mass": 1000, 
+            "core_mass": 35000, 
             "cylindrical_delta": 5, 
             "disadv_a": 0.40950, 
             "disadv_b": 0.707490, 
@@ -176,8 +176,8 @@ BASE_SIM = {"simulation": {
          "config": {"ReactorFacility": {
             "DA_mode": 0, 
             "batches": 5, 
-            "burnupcalc_timestep": 200, 
-            "core_mass": "10", 
+            "burnupcalc_timestep": 50, 
+            "core_mass": 3000, 
             "cylindrical_delta": "5", 
             "disadv_a": "0.40950", 
             "disadv_b": "0.707490", 
@@ -209,14 +209,14 @@ BASE_SIM = {"simulation": {
          "config": {"ReprocessFacility": {
             "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
             "in_commod": {"val": "FR Spent Fuel"}, 
-            "input_capacity": 2000000, 
+            "input_capacity": 20000000, 
             "max_inv_size": 1.0E+299, 
-            "output_capacity": 200000, 
+            "output_capacity": 2000000, 
             "repro_input_path": "hist/FR_reprocess.txt"
             }},}, 
         {"name": "SINK",
          "config": {"Sink": {
-            "capacity": 10000000, 
+            "capacity": 100000000, 
             "in_commods": {"val": "WASTE"}, 
             "max_inv_size": "1.000000000000000E+299"
             }},}
