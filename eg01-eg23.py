@@ -1,6 +1,8 @@
 """Generates an input file for transitioning from EG01 -> EG23"""
 from __future__ import unicode_literals, print_function
 from math import ceil
+from copy import deepcopy
+from argparse import ArgumentParser
 
 try:
     import simplejson as json
@@ -68,17 +70,10 @@ bo_deployment = {'LWR': [0,            # 1964
 BASE_SIM = {"simulation": {
     "archetypes": {
         "spec": [
-            {"lib": "Brightlite", "name": "FuelfabFacility"}, 
             {"lib": "agents", "name": "Source"}, 
-            {"lib": "agents", "name": "Source"}, 
-            {"lib": "Brightlite", "name": "FuelfabFacility"}, 
-            {"lib": "Brightlite", "name": "ReprocessFacility"}, 
-            {"lib": "Brightlite", "name": "ReactorFacility"}, 
-            {"lib": "Brightlite", "name": "ReactorFacility"}, 
-            {"lib": "Brightlite", "name": "ReprocessFacility"}, 
             {"lib": "agents", "name": "Sink"}, 
-            {"lib": "agents", "name": "NullRegion"}, 
             {"lib": "agents", "name": "NullInst"}, 
+            {"lib": "agents", "name": "NullRegion"}, 
             {"lib": "cycamore", "name": "DeployInst"}
             ]
         }, 
@@ -98,16 +93,6 @@ BASE_SIM = {"simulation": {
     "control": {"duration": 12 * 251, "startmonth": 1, "startyear": 1964}, 
     #"control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
     "facility": [
-        {"name": "FR Fuel Fab",
-         "config": {"FuelfabFacility": {
-            "fissle_stream": "LWR Reprocessed", 
-            #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
-            #"in_commods": {"key": "FR Reprocessed", "val": 0.0},
-            "in_commods": {"key": "FR Reprocessed", "val": 1.0},
-            "maximum_storage": 1e60, 
-            "non_fissle_stream": "DU2", 
-            "out_commod": "FR Fuel"
-            }},}, 
         {"name": "MineU235",
          "config": {"Source": {"capacity": 40000000, "commod": "U235", 
                                "recipe_name": "U235"}},}, 
@@ -120,100 +105,6 @@ BASE_SIM = {"simulation": {
         {"name": "DU2",
          "config": {"Source": {"capacity": 20000000, "commod": "DU2", 
                                "recipe_name": "DU"}},}, 
-        {"name": "LWR Fuel Fab",
-         "config": {"FuelfabFacility": {
-            "fissle_stream": "U235", 
-            "in_commods": {"key": "DU", "val": 0.0}, 
-            "maximum_storage": 1e60, 
-            "non_fissle_stream": "U238", 
-            "out_commod": "LWR Fuel",
-            }},}, 
-        {"name": "LWR Seperation",
-         "config": {"ReprocessFacility": {
-            "commod_out": {"val": ["LWR Reprocessed", "WASTE"]}, 
-            "in_commod": {"val": "LWR Spent Fuel"}, 
-            "input_capacity": 20000000, 
-            "max_inv_size": 1e299, 
-            "output_capacity": 20000000, 
-            "repro_input_path": "hist/FR_reprocess.txt"
-            }},}, 
-        {"name": "LWR",
-         "lifetime": 12*80,   
-         "config": {"ReactorFacility": {
-            "DA_mode": 0, 
-            "batches": 3, 
-            "burnupcalc_timestep": 200, 
-            "core_mass": 35000, 
-            "cylindrical_delta": 5, 
-            "disadv_a": 0.40950, 
-            "disadv_b": 0.707490, 
-            "disadv_fuel_sigs": 0.430, 
-            "disadv_mod_siga": 0.2220, 
-            "disadv_mod_sigs": 3.440, 
-            "efficiency": 0.330, 
-            "flux_mode": 1, 
-            "fuel_Sig_tr": 3.940, 
-            "fuel_area": "89197", 
-            "generated_power": 1000.0, 
-            "in_commods": {"val": "LWR Fuel"}, 
-            "interpol_pairs": {"key": "BURNUP", "val": 42}, 
-            "libraries": {"val": "extLWR"}, 
-            "max_inv_size": 1e299, 
-            "mod_Sig_a": 0.02220, 
-            "mod_Sig_f": 0.0, 
-            "mod_Sig_tr": 3.460, 
-            "mod_thickness": 100, 
-            "nonleakage": 0.980, 
-            "out_commod": "LWR Spent Fuel", 
-            "reactor_life": 960, 
-            "target_burnup": 45, 
-            "tolerance": 0.0010, 
-            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
-                                   "942410", "942420"]}, 
-            }},}, 
-        {"name": "FR",
-         "lifetime": 12*80,       
-         "config": {"ReactorFacility": {
-            "DA_mode": 0, 
-            "batches": 5, 
-            "burnupcalc_timestep": 50, 
-            "core_mass": 3000, 
-            "cylindrical_delta": "5", 
-            "disadv_a": "0.40950", 
-            "disadv_b": "0.707490", 
-            "disadv_fuel_sigs": "0.430", 
-            "disadv_mod_siga": "0.2220", 
-            "disadv_mod_sigs": "3.440", 
-            "efficiency": "0.330", 
-            "flux_mode": "1", 
-            "fuel_Sig_tr": "3.940", 
-            "fuel_area": "89197", 
-            "generated_power": "400.0", 
-            "in_commods": {"val": "FR Fuel"}, 
-            "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
-            "libraries": {"val": "FR50"}, 
-            "max_inv_size": "1.000000000000000E+299", 
-            "mod_Sig_a": "0.02220", 
-            "mod_Sig_f": "0.0", 
-            "mod_Sig_tr": "3.460", 
-            "mod_thickness": "100", 
-            "nonleakage": "0.57", 
-            "out_commod": "FR Spent Fuel", 
-            "reactor_life": 960, 
-            "target_burnup": 200, 
-            "tolerance": "0.0010",
-            "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
-                                   "942410", "942420"]}, 
-            }},}, 
-        {"name": "FR Reprocess",
-         "config": {"ReprocessFacility": {
-            "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
-            "in_commod": {"val": "FR Spent Fuel"}, 
-            "input_capacity": 20000000, 
-            "max_inv_size": 1.0E+299, 
-            "output_capacity": 2000000, 
-            "repro_input_path": "hist/FR_reprocess.txt"
-            }},}, 
         {"name": "SINK",
          "config": {"Sink": {
             "capacity": 100000000, 
@@ -265,7 +156,137 @@ BASE_SIM = {"simulation": {
     }
 }
 
-def make_simulation():
+#
+# Bright-lite specialization
+#
+
+BRIGHT_SIM = deepcopy(BASE_SIM)
+BRIGHT_SIM['simulation']['archetypes']['spec'].extend([
+    {"lib": "Brightlite", "name": "FuelfabFacility"}, 
+    {"lib": "Brightlite", "name": "ReactorFacility"}, 
+    {"lib": "Brightlite", "name": "ReprocessFacility"}, 
+    ])
+BRIGHT_SIM['simulation']['facility'].extend([
+    {"name": "LWR Fuel Fab",
+     "config": {"FuelfabFacility": {
+        "fissle_stream": "U235", 
+        "in_commods": {"key": "DU", "val": 0.0}, 
+        "maximum_storage": 1e60, 
+        "non_fissle_stream": "U238", 
+        "out_commod": "LWR Fuel",
+        }},}, 
+    {"name": "FR Fuel Fab",
+     "config": {"FuelfabFacility": {
+        "fissle_stream": "LWR Reprocessed", 
+        #"in_commods": {"key": "FR Reprocessed", "val": 0.05}, 
+        #"in_commods": {"key": "FR Reprocessed", "val": 0.0},
+        "in_commods": {"key": "FR Reprocessed", "val": 1.0},
+        "maximum_storage": 1e60, 
+        "non_fissle_stream": "DU2", 
+        "out_commod": "FR Fuel"
+        }},}, 
+    {"name": "LWR Seperation",
+     "config": {"ReprocessFacility": {
+        "commod_out": {"val": ["LWR Reprocessed", "WASTE"]}, 
+        "in_commod": {"val": "LWR Spent Fuel"}, 
+        "input_capacity": 20000000, 
+        "max_inv_size": 1e299, 
+        "output_capacity": 20000000, 
+        "repro_input_path": "hist/FR_reprocess.txt"
+        }},}, 
+    {"name": "FR Reprocess",
+     "config": {"ReprocessFacility": {
+        "commod_out": {"val": ["FR Reprocessed", "WASTE"]}, 
+        "in_commod": {"val": "FR Spent Fuel"}, 
+        "input_capacity": 20000000, 
+        "max_inv_size": 1.0E+299, 
+        "output_capacity": 2000000, 
+        "repro_input_path": "hist/FR_reprocess.txt"
+        }},}, 
+    {"name": "LWR",
+     "lifetime": 12*80,   
+     "config": {"ReactorFacility": {
+        "DA_mode": 0, 
+        "batches": 3, 
+        "burnupcalc_timestep": 200, 
+        "core_mass": 35000, 
+        "cylindrical_delta": 5, 
+        "disadv_a": 0.40950, 
+        "disadv_b": 0.707490, 
+        "disadv_fuel_sigs": 0.430, 
+        "disadv_mod_siga": 0.2220, 
+        "disadv_mod_sigs": 3.440, 
+        "efficiency": 0.330, 
+        "flux_mode": 1, 
+        "fuel_Sig_tr": 3.940, 
+        "fuel_area": "89197", 
+        "generated_power": 1000.0, 
+        "in_commods": {"val": "LWR Fuel"}, 
+        "interpol_pairs": {"key": "BURNUP", "val": 42}, 
+        "libraries": {"val": "extLWR"}, 
+        "max_inv_size": 1e299, 
+        "mod_Sig_a": 0.02220, 
+        "mod_Sig_f": 0.0, 
+        "mod_Sig_tr": 3.460, 
+        "mod_thickness": 100, 
+        "nonleakage": 0.980, 
+        "out_commod": "LWR Spent Fuel", 
+        "reactor_life": 960, 
+        "target_burnup": 45, 
+        "tolerance": 0.0010, 
+        "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
+                               "942410", "942420"]}, 
+        }},}, 
+    {"name": "FR",
+     "lifetime": 12*80,       
+     "config": {"ReactorFacility": {
+        "DA_mode": 0, 
+        "batches": 5, 
+        "burnupcalc_timestep": 50, 
+        "core_mass": 3000, 
+        "cylindrical_delta": "5", 
+        "disadv_a": "0.40950", 
+        "disadv_b": "0.707490", 
+        "disadv_fuel_sigs": "0.430", 
+        "disadv_mod_siga": "0.2220", 
+        "disadv_mod_sigs": "3.440", 
+        "efficiency": "0.330", 
+        "flux_mode": "1", 
+        "fuel_Sig_tr": "3.940", 
+        "fuel_area": "89197", 
+        "generated_power": "400.0", 
+        "in_commods": {"val": "FR Fuel"}, 
+        "interpol_pairs": {"key": "BURNUP", "val": "42"}, 
+        "libraries": {"val": "FR50"}, 
+        "max_inv_size": "1.000000000000000E+299", 
+        "mod_Sig_a": "0.02220", 
+        "mod_Sig_f": "0.0", 
+        "mod_Sig_tr": "3.460", 
+        "mod_thickness": "100", 
+        "nonleakage": "0.57", 
+        "out_commod": "FR Spent Fuel", 
+        "reactor_life": 960, 
+        "target_burnup": 200, 
+        "tolerance": "0.0010",
+        "CR_fissile": {"val": ["922350", "942380", "942390", "942400", 
+                               "942410", "942420"]}, 
+        }},}, 
+    ])
+
+#
+# Cycamore specialization
+#
+
+CYCAMORE_SIM = deepcopy(BASE_SIM)
+
+
+#
+# All sims
+#
+
+BASE_SIMS = {'bright': BRIGHT_SIM, 'cycamore': CYCAMORE_SIM}
+
+def make_simulation(stack):
     build_sched = []
     lwr_xml = "<prototype>LWR</prototype><number>{0}</number><date>{1}</date>"
     for i, n in enumerate(bo_deployment['LWR']):
@@ -277,14 +298,21 @@ def make_simulation():
         if n == 0:
             continue
         build_sched.append(fr_xml.format(int(ceil(n)), i*12))
-     
-    BASE_SIM["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
-    return BASE_SIM    
+    base_sim = BASE_SIMS[stack]
+    base_sim["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
+    return base_sim    
 
 
 def main():
-    sim = make_simulation()
-    with open('eg01-eg23.json', 'w') as f:
+    parser = ArgumentParser('eg01-eg23')
+    parser.add_argument('stack', default='bright', nargs='?',
+                        choices=['bright', 'cycamore'],
+                        help="stack to generate input file for.")
+    ns = parser.parse_args()
+
+    sim = make_simulation(ns.stack)
+    fname = 'eg01-eg23-{0}.json'.format(ns.stack)
+    with open(fname, 'w') as f:
         json.dump(sim, f, sort_keys=True, indent=1, separators=(', ', ': '))
 
 if __name__ == '__main__':
