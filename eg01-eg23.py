@@ -1,5 +1,6 @@
 """Generates an input file for transitioning from EG01 -> EG23"""
 from __future__ import unicode_literals, print_function
+
 from math import ceil
 from copy import deepcopy
 from argparse import ArgumentParser
@@ -90,8 +91,8 @@ BASE_SIM = {"simulation": {
         {"name": "FR Fuel", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0}
         ], 
-    "control": {"duration": 12 * 251, "startmonth": 1, "startyear": 1964}, 
-    #"control": {"duration": 12 * 20, "startmonth": 1, "startyear": 2005}, 
+    #"control": {"duration": 12 * 251, "startmonth": 1, "startyear": 1964}, 
+    "control": {"duration": 12 * 151, "startmonth": 1, "startyear": 1964}, 
     "facility": [
         {"name": "MineU235",
          "config": {"Source": {"capacity": 40000000, "commod": "U235", 
