@@ -308,6 +308,17 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         }},}, 
     {"name": "LWR Seperation",
      "config": {"Separations": {
+        "feed_commod_prefs": {"val": "2.0"}, 
+        "feed_commods": {"val": "spent_uox"}, 
+        "feedbuf_size": 1e300, 
+        "leftover_commod": "WASTE", 
+        "streams": {
+            "commod": "sep_stream", 
+            "info": {"buf_size": "1e100", "efficiencies": {"comp": "Pu", "eff": ".99"}}
+            }, 
+        "throughput": 1e300,
+
+
         "commod_out": {"val": ["LWR Reprocessed", "WASTE"]}, 
         "in_commod": {"val": "LWR Spent Fuel"}, 
         "input_capacity": 20000000, 
