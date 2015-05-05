@@ -392,14 +392,14 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         "feed_commods": {"val": "spent_uox"}, 
         "feedbuf_size": 1e300, 
         "leftover_commod": "WASTE", 
-        "streams": {
+        "streams": {"item": {
             "commod": "sep_stream", 
             "info": {"buf_size": "1e100", "efficiencies": {"item": [
                 {"comp": "Pu", "eff": 0.99},
                 {"comp": "Np", "eff": 0.99},
                 {"comp": "Am", "eff": 0.99},
                 {"comp": "Cm", "eff": 0.99}
-                ]}}
+                ]}}}
             }, 
         "throughput": 1e300,
         }},}, 
@@ -409,14 +409,14 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         "feed_commods": {"val": "FR Spent Fuel"}, 
         "feedbuf_size": 1e300, 
         "leftover_commod": "WASTE", 
-        "streams": {
+        "streams": {"item": {
             "commod": "sep_stream", 
             "info": {"buf_size": "1e100", "efficiencies": {"item": [
                 {"comp": "Pu", "eff": 0.99},
                 {"comp": "Np", "eff": 0.99},
                 {"comp": "Am", "eff": 0.99},
                 {"comp": "Cm", "eff": 0.99},
-                ]}}
+                ]}}}
             }, 
         "throughput": 1e300,
         }},}, 
