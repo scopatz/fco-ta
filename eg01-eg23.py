@@ -114,58 +114,49 @@ BASE_SIM = {"simulation": {
             }},}
         ], 
     "recipe": [
-        {
-        "basis": "mass", 
-        "name": "natl_u", 
-        "nuclide": [
+        {"basis": "mass", 
+         "name": "natl_u", 
+         "nuclide": [
             {"comp": "0.711", "id": "U235"}, 
-            {"comp": "99.289", "id": "U238"}]
-        }, 
-        {
-        "basis": "mass", 
-        "name": "fresh_uox", 
-        "nuclide": [
+            {"comp": "99.289", "id": "U238"},
+            ]}, 
+        {"basis": "mass", 
+         "name": "fresh_uox", 
+         "nuclide": [
             {"comp": "0.04", "id": "U235"}, 
-            {"comp": "0.96", "id": "U238"}]
-        }, 
-        {
-        "basis": "mass", 
-        "name": "depleted_u", 
-        "nuclide": [
+            {"comp": "0.96", "id": "U238"},
+            ]}, 
+        {"basis": "mass", 
+         "name": "depleted_u", 
+         "nuclide": [
             {"comp": "0.003", "id": "U235"}, 
-            {"comp": "0.997", "id": "U238"}           
-            ]
-        }, 
-        {
-        "basis": "mass", 
-        "name": "fresh_mox", 
-        "nuclide": [
+            {"comp": "0.997", "id": "U238"},
+            ]}, 
+        {"basis": "mass", 
+         "name": "fresh_mox", 
+         "nuclide": [
             {"comp": "0.0027381", "id": "U235"}, 
             {"comp": "0.9099619", "id": "U238"}, 
             {"comp": "0.001746", "id": "Pu238"}, 
             {"comp": "0.045396", "id": "Pu239"}, 
             {"comp": "0.020952", "id": "Pu240"}, 
             {"comp": "0.013095", "id": "Pu241"}, 
-            {"comp": "0.005238", "id": "Pu242"}
-            ]
-        }, 
-        {
-        "basis": "mass", 
-        "name": "spent_mox", 
-        "nuclide": [
+            {"comp": "0.005238", "id": "Pu242"},
+            ]}, 
+        {"basis": "mass", 
+         "name": "spent_mox", 
+         "nuclide": [
             {"comp": "0.0017381", "id": "U235"}, 
             {"comp": "0.90", "id": "U238"}, 
             {"comp": "0.001746", "id": "Pu238"}, 
             {"comp": "0.0134", "id": "Pu239"}, 
             {"comp": "0.020952", "id": "Pu240"}, 
             {"comp": "0.013095", "id": "Pu241"}, 
-            {"comp": "0.005238", "id": "Pu242"}
-            ]
-        }, 
-        {
-        "basis": "mass", 
-        "name": "spent_uox", 
-        "nuclide": [
+            {"comp": "0.005238", "id": "Pu242"},
+            ]}, 
+        {"basis": "mass", 
+         "name": "spent_uox", 
+         "nuclide": [
             {"comp": "156.729", "id": "U235"}, 
             {"comp": "102.103", "id": "U236"}, 
             {"comp": "18280.324", "id": "U238"}, 
@@ -178,16 +169,14 @@ BASE_SIM = {"simulation": {
             {"comp": "1.234", "id": "Am241"}, 
             {"comp": "3.607", "id": "Am243"}, 
             {"comp": "0.431", "id": "Cm244"}, 
-            {"comp": "1.263", "id": "Cm245"}
-            ]
-        },
+            {"comp": "1.263", "id": "Cm245"},
+            ]},
         {"basis": "mass", 
          "name": "fast_fuel", 
          "nuclide": [
             {"comp": "0.9236", "id": "U238"}, 
             {"comp": "0.0764", "id": "Pu239"},
-            ],
-         }, 
+            ]}, 
         {"basis": "mass", 
          "name": "fast_spent", 
          "nuclide": [
@@ -203,8 +192,7 @@ BASE_SIM = {"simulation": {
             {"comp": "0.002968", "id": "Nd145"}, 
             {"comp": "0.002985", "id": "Nd146"}, 
             {"comp": "0.002189", "id": "Nd148"},
-            ]
-        },         
+            ]},         
         {"name": "U238", 
          "basis": "mass",
          "nuclide": {"comp": 100.0, "id": "922380"}
@@ -216,8 +204,8 @@ BASE_SIM = {"simulation": {
         {"name": "DU", 
          "basis": "mass", 
          "nuclide": [{"comp": 0.25, "id": "922350"}, 
-                     {"comp": 99.75, "id": "922380"}]
-         }
+                     {"comp": 99.75, "id": "922380"},
+         ]},
         ], 
     "region": {
         "name": "USA",
