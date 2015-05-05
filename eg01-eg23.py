@@ -172,13 +172,13 @@ BASE_SIM = {"simulation": {
             {"comp": "1.263", "id": "Cm245"},
             ]},
         {"basis": "mass", 
-         "name": "fast_fuel", 
+         "name": "fresh_fr_fuel", 
          "nuclide": [
             {"comp": "0.9236", "id": "U238"}, 
             {"comp": "0.0764", "id": "Pu239"},
             ]}, 
         {"basis": "mass", 
-         "name": "fast_spent", 
+         "name": "spent_fr_fuel", 
          "nuclide": [
             {"comp": "0.859", "id": "U238"}, 
             {"comp": "0.0902", "id": "Pu239"}, 
