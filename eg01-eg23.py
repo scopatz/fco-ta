@@ -226,10 +226,11 @@ BASE_SIM = {"simulation": {
                 ]}, 
              }, 
             {"name": "utility2",
-             "config": {"DeployInst": {"buildorder": [
-                "<prototype>LWR</prototype><number>2</number><date>5</date>",
-                "<prototype>FR</prototype><number>1</number><date>10</date>",
-                ]},}, 
+             "config": {"DeployInst": {
+                'prototypes': {'val': ['LWR', 'FR']},
+                'build_times': {'val': [5, 10]},
+                'n_build': {'val': [2, 1]},
+                }}, 
              }
             ], 
         }
@@ -457,20 +458,27 @@ CYCAMORE_SIM['simulation']['facility'].extend([
 BASE_SIMS = {'bright': BRIGHT_SIM, 'cycamore': CYCAMORE_SIM}
 
 def make_simulation(stack):
-    build_sched = []
-    lwr_xml = "<prototype>LWR</prototype><number>{0}</number><date>{1}</date>"
+    prototypes = []
+    build_times = []
+    n_build = []
     for i, n in enumerate(bo_deployment['LWR']):
         if n == 0:
             continue
-        build_sched.append(lwr_xml.format(n, i*12))
-    fr_xml = "<prototype>FR</prototype><number>{0}</number><date>{1}</date>"
+        prototypes.append('LWR')
+        build_times.append(i*12)
+        n_build.append(n)
     for i, n in enumerate(bo_deployment['FR']):
         if n == 0:
             continue
-        build_sched.append(fr_xml.format(int(ceil(n)), i*12))
-    base_sim = BASE_SIMS[stack]
-    base_sim["simulation"]["region"]["institution"][1]["config"]["DeployInst"]["buildorder"] = build_sched
-    return base_sim    
+        prototypes.append('FR')
+        build_times.append(i*12)
+        n_build.append(int(n/0.4))
+    bs = BASE_SIMS[stack]
+    di = bs["simulation"]["region"]["institution"][1]["config"]["DeployInst"]
+    di['prototypes']['val'] = prototypes
+    di['build_times']['val'] = build_times
+    di['n_build']['val'] = n_build
+    return bs
 
 
 def main():
