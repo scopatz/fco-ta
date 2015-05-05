@@ -181,8 +181,30 @@ BASE_SIM = {"simulation": {
             {"comp": "1.263", "id": "Cm245"}
             ]
         },
-
-        
+        {"basis": "mass", 
+         "name": "fast_fuel", 
+         "nuclide": [
+            {"comp": "0.9236", "id": "U238"}, 
+            {"comp": "0.0764", "id": "Pu239"},
+            ],
+         }, 
+        {"basis": "mass", 
+         "name": "fast_spent", 
+         "nuclide": [
+            {"comp": "0.859", "id": "U238"}, 
+            {"comp": "0.0902", "id": "Pu239"}, 
+            {"comp": "0.0013", "id": "Am241"}, 
+            {"comp": "0.006770", "id": "La139"}, 
+            {"comp": "0.006525", "id": "Ce140"}, 
+            {"comp": "0.006121", "id": "Ce142"}, 
+            {"comp": "0.006550", "id": "Pr141"}, 
+            {"comp": "0.004830", "id": "Nd143"}, 
+            {"comp": "0.004291", "id": "Nd144"}, 
+            {"comp": "0.002968", "id": "Nd145"}, 
+            {"comp": "0.002985", "id": "Nd146"}, 
+            {"comp": "0.002189", "id": "Nd148"},
+            ]
+        },         
         {"name": "U238", 
          "basis": "mass",
          "nuclide": {"comp": 100.0, "id": "922380"}
