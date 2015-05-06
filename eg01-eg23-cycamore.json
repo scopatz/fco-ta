@@ -38,31 +38,23 @@
   }, 
   "commodity": [
    {
+    "name": "U235", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "U238", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "LWR Fuel", 
+    "solution_priority": 1.0
+   }, 
+   {
     "name": "LWR Fuel Fab", 
     "solution_priority": 1.0
    }, 
    {
     "name": "LWR Spent Fuel", 
-    "solution_priority": 1.0
-   }, 
-   {
-    "name": "FR Spent Fuel", 
-    "solution_priority": 1.0
-   }, 
-   {
-    "name": "FR Fuel", 
-    "solution_priority": 1.0
-   }, 
-   {
-    "name": "DU", 
-    "solution_priority": 1.0
-   }, 
-   {
-    "name": "LWR Reprocessed", 
-    "solution_priority": 1.0
-   }, 
-   {
-    "name": "FR Reprocessed", 
     "solution_priority": 1.0
    }, 
    {
@@ -74,7 +66,27 @@
     "solution_priority": 1.0
    }, 
    {
+    "name": "LWR Reprocessed", 
+    "solution_priority": 1.0
+   }, 
+   {
     "name": "FR Fuel", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "DU", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "DU2", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "FR Spent Fuel", 
+    "solution_priority": 1.0
+   }, 
+   {
+    "name": "FR Reprocessed", 
     "solution_priority": 1.0
    }, 
    {
@@ -152,7 +164,7 @@
       "fiss_size": 1e+60, 
       "outcommod": "LWR Fuel", 
       "spectrum": "thermal", 
-      "throughput": 1e+300
+      "throughput": 1e+60
      }
     }, 
     "name": "LWR Fuel Fab"
@@ -163,13 +175,22 @@
       "fill_commod": "DU2", 
       "fill_recipe": "DU", 
       "fill_size": 1e+60, 
+      "fiss_commod_prefs": {
+       "val": [
+        1.0, 
+        2.0
+       ]
+      }, 
       "fiss_commods": {
-       "val": "LWR Reprocessed"
+       "val": [
+        "LWR Reprocessed", 
+        "FR Reprocessed"
+       ]
       }, 
       "fiss_size": 1e+60, 
       "outcommod": "FR Fuel", 
       "spectrum": "fission_spectrum_ave", 
-      "throughput": 1e+300
+      "throughput": 1e+60
      }
     }, 
     "name": "FR Fuel Fab"
@@ -178,16 +199,16 @@
     "config": {
      "Separations": {
       "feed_commod_prefs": {
-       "val": "2.0"
+       "val": 2.0
       }, 
       "feed_commods": {
-       "val": "spent_uox"
+       "val": "LWR Spent Fuel"
       }, 
-      "feedbuf_size": 1e+300, 
+      "feedbuf_size": 107537, 
       "leftover_commod": "WASTE", 
       "streams": {
        "item": {
-        "commod": "sep_stream", 
+        "commod": "LWR Reprocessed", 
         "info": {
          "buf_size": "1e100", 
          "efficiencies": {
@@ -195,25 +216,13 @@
            {
             "comp": "Pu", 
             "eff": 0.99
-           }, 
-           {
-            "comp": "Np", 
-            "eff": 0.99
-           }, 
-           {
-            "comp": "Am", 
-            "eff": 0.99
-           }, 
-           {
-            "comp": "Cm", 
-            "eff": 0.99
            }
           ]
          }
         }
        }
       }, 
-      "throughput": 1e+300
+      "throughput": 83333.3333
      }
     }, 
     "name": "LWR Separation"
@@ -222,34 +231,22 @@
     "config": {
      "Separations": {
       "feed_commod_prefs": {
-       "val": "2.0"
+       "val": 2.0
       }, 
       "feed_commods": {
        "val": "FR Spent Fuel"
       }, 
-      "feedbuf_size": 1e+300, 
+      "feedbuf_size": 1e+100, 
       "leftover_commod": "WASTE", 
       "streams": {
        "item": {
-        "commod": "sep_stream", 
+        "commod": "FR Reprocessed", 
         "info": {
-         "buf_size": "1e100", 
+         "buf_size": 1e+100, 
          "efficiencies": {
           "item": [
            {
             "comp": "Pu", 
-            "eff": 0.99
-           }, 
-           {
-            "comp": "Np", 
-            "eff": 0.99
-           }, 
-           {
-            "comp": "Am", 
-            "eff": 0.99
-           }, 
-           {
-            "comp": "Cm", 
             "eff": 0.99
            }
           ]
@@ -257,7 +254,7 @@
         }
        }
       }, 
-      "throughput": 1e+300
+      "throughput": 1e+100
      }
     }, 
     "name": "FR Reprocess"
@@ -266,7 +263,7 @@
     "config": {
      "Reactor": {
       "assem_size": 11666.666666666666, 
-      "cycle_time": "11", 
+      "cycle_time": 18, 
       "fuel_incommods": {
        "val": "LWR Fuel"
       }, 
@@ -284,7 +281,8 @@
       }, 
       "n_assem_batch": "1", 
       "n_assem_core": "3", 
-      "refuel_time": "1"
+      "power_cap": 1000, 
+      "refuel_time": 1
      }
     }, 
     "lifetime": 960, 
@@ -294,7 +292,7 @@
     "config": {
      "Reactor": {
       "assem_size": 10000.0, 
-      "cycle_time": "11", 
+      "cycle_time": 14, 
       "fuel_incommods": {
        "val": "FR Fuel"
       }, 
@@ -312,6 +310,7 @@
       }, 
       "n_assem_batch": "1", 
       "n_assem_core": "3", 
+      "power_cap": 400, 
       "refuel_time": "1"
      }
     }, 
@@ -359,74 +358,6 @@
      {
       "comp": "0.997", 
       "id": "U238"
-     }
-    ]
-   }, 
-   {
-    "basis": "mass", 
-    "name": "fresh_mox", 
-    "nuclide": [
-     {
-      "comp": "0.0027381", 
-      "id": "U235"
-     }, 
-     {
-      "comp": "0.9099619", 
-      "id": "U238"
-     }, 
-     {
-      "comp": "0.001746", 
-      "id": "Pu238"
-     }, 
-     {
-      "comp": "0.045396", 
-      "id": "Pu239"
-     }, 
-     {
-      "comp": "0.020952", 
-      "id": "Pu240"
-     }, 
-     {
-      "comp": "0.013095", 
-      "id": "Pu241"
-     }, 
-     {
-      "comp": "0.005238", 
-      "id": "Pu242"
-     }
-    ]
-   }, 
-   {
-    "basis": "mass", 
-    "name": "spent_mox", 
-    "nuclide": [
-     {
-      "comp": "0.0017381", 
-      "id": "U235"
-     }, 
-     {
-      "comp": "0.90", 
-      "id": "U238"
-     }, 
-     {
-      "comp": "0.001746", 
-      "id": "Pu238"
-     }, 
-     {
-      "comp": "0.0134", 
-      "id": "Pu239"
-     }, 
-     {
-      "comp": "0.020952", 
-      "id": "Pu240"
-     }, 
-     {
-      "comp": "0.013095", 
-      "id": "Pu241"
-     }, 
-     {
-      "comp": "0.005238", 
-      "id": "Pu242"
      }
     ]
    }, 
