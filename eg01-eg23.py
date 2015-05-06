@@ -94,8 +94,8 @@ BASE_SIM = {"simulation": {
         {"name": "FR Reprocessed", "solution_priority": 1.0}, 
         {"name": "WASTE", "solution_priority": 1.0},
         ], 
-    #"control": {"duration": 12 * 251, "startmonth": 1, "startyear": 1964}, 
-    "control": {"duration": 12 * 151, "startmonth": 1, "startyear": 1964}, 
+    "control": {"duration": 12 * 251, "startmonth": 1, "startyear": 1964}, 
+    #"control": {"duration": 12 * 151, "startmonth": 1, "startyear": 1964}, 
     "facility": [
         {"name": "MineU235",
          "config": {"Source": {"capacity": 40000000, "commod": "U235", 
@@ -373,19 +373,20 @@ CYCAMORE_SIM['simulation']['facility'].extend([
      "config": {"Separations": {
         "feed_commod_prefs": {"val": 2.0}, 
         "feed_commods": {"val": "LWR Spent Fuel"}, 
-        "feedbuf_size": 107537, 
+        "feedbuf_size": 1e100, 
+        #"feedbuf_size": 107537, 
         "leftover_commod": "WASTE", 
         "streams": {"item": {
             "commod": "LWR Reprocessed", 
-            "info": {"buf_size": "1e100", "efficiencies": {"item": [
+            "info": {"buf_size": 1e100, "efficiencies": {"item": [
                 {"comp": "Pu", "eff": 0.99},
                 #{"comp": "Np", "eff": 0.99},
                 #{"comp": "Am", "eff": 0.99},
                 #{"comp": "Cm", "eff": 0.99},
                 ]}}}
             }, 
-        #"throughput": 1e300,
-        "throughput": 83333.3333,
+        "throughput": 1e100,
+        #"throughput": 83333.3333,
         }},}, 
     {"name": "FR Reprocess",
      "config": {"Separations": {
@@ -420,12 +421,12 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         "n_assem_core": "3",
         "refuel_time": 1,
         "power_cap": 1000,
-        #"n_assem_spent": 1000000,
         }},},
     {"name": "FR",
      "lifetime": 12*80,       
      "config": {"Reactor": {
         "assem_size": 30000/3, 
+        #"assem_size": 7490, 
         #"cycle_time": "11", 
         "cycle_time": 14, 
         "fuel_incommods": {"val": "FR Fuel"}, 
@@ -433,9 +434,9 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         "fuel_outcommods": {"val": "FR Spent Fuel"}, 
         "fuel_outrecipes": {"val": "spent_fr_fuel"}, 
         "fuel_prefs": {"val": 1.0}, 
-        "n_assem_batch": "1", 
-        "n_assem_core": "3", 
-        "refuel_time": "1", 
+        "n_assem_batch": 1, 
+        "n_assem_core": 3, 
+        "refuel_time": 1, 
         "power_cap": 400,
         }},}, 
     ])

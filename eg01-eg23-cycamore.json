@@ -95,7 +95,7 @@
    }
   ], 
   "control": {
-   "duration": 1812, 
+   "duration": 3012, 
    "startmonth": 1, 
    "startyear": 1964
   }, 
@@ -204,13 +204,13 @@
       "feed_commods": {
        "val": "LWR Spent Fuel"
       }, 
-      "feedbuf_size": 107537, 
+      "feedbuf_size": 1e+100, 
       "leftover_commod": "WASTE", 
       "streams": {
        "item": {
         "commod": "LWR Reprocessed", 
         "info": {
-         "buf_size": "1e100", 
+         "buf_size": 1e+100, 
          "efficiencies": {
           "item": [
            {
@@ -222,7 +222,7 @@
         }
        }
       }, 
-      "throughput": 83333.3333
+      "throughput": 1e+100
      }
     }, 
     "name": "LWR Separation"
@@ -308,10 +308,10 @@
       "fuel_prefs": {
        "val": 1.0
       }, 
-      "n_assem_batch": "1", 
-      "n_assem_core": "3", 
+      "n_assem_batch": 1, 
+      "n_assem_core": 3, 
       "power_cap": 400, 
-      "refuel_time": "1"
+      "refuel_time": 1
      }
     }, 
     "lifetime": 960, 
