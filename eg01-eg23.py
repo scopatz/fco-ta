@@ -447,17 +447,19 @@ CYCAMORE_SIM['simulation']['facility'].extend([
 
 BASE_SIMS = {'bright': BRIGHT_SIM, 'cycamore': CYCAMORE_SIM}
 
-def make_simulation(stack):
+def make_simulation(stack, deployment=None):
+    if deployment is None:
+        deployment = bo_deployment
     prototypes = []
     build_times = []
     n_build = []
-    for i, n in enumerate(bo_deployment['LWR']):
+    for i, n in enumerate(deployment['LWR']):
         if n == 0:
             continue
         prototypes.append('LWR')
         build_times.append(i*12)
         n_build.append(n)
-    for i, n in enumerate(bo_deployment['FR']):
+    for i, n in enumerate(deployment['FR']):
         if n == 0:
             continue
         prototypes.append('FR')

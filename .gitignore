@@ -1,3 +1,5 @@
 .ipynb_checkpoints/
 *.h5
 *.sqlite
+*.sqlite-journal
+__pycache__/
