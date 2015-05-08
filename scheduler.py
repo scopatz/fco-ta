@@ -78,7 +78,7 @@ def run_simulations(j=1):
     sims = make_simulations()
     pool = Pool(j)
     onames = pool.map(run_simulation, sims)
-    if any(map((lambda x: x is None), onames):
+    if any(map((lambda x: x is None), onames)):
         print('Some simulations failed:')
         for sim, oname in zip(sims, onames):
             if oname is None:
