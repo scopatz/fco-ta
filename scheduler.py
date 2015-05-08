@@ -3,7 +3,7 @@ from __future__ import print_function, unicode_literals
 import os
 import subprocess
 from copy import deepcopy
-from mutliprocess import Pool
+from multiprocess import Pool
 from argparse import ArgumentParser
 from contextlib import contextmanager
 try:
