@@ -54,6 +54,37 @@ def make_simulations():
     return sims
 
 
+def run_simulation(fname):
+    basename = os.path.splitext(fname)[0]
+    oname = basename + '.sqlite'
+    outname = basename + '.out'
+    if os.path.isfile(oname):
+        return oname
+    out = ''
+    cmd = ['cyclus', '-o', oname, fname]
+    try:
+        out = subprocess.check_output(cmd, universal_newlines=True, 
+                                      stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError:
+        if os.path.isfile(oname):
+            os.remove(oname)
+        return None
+    with open(outname, 'w') as f:
+        f.write(out)
+    return oname
+
+
+def run_simulations(j=1):
+    sims = make_simulations()
+    pool = Pool(j)
+    onames = pool.map(run_simulation, sims)
+    if any(map((lambda x: x is None), onames):
+        print('Some simulations failed:')
+        for sim, oname in zip(sims, onames):
+            if oname is None:
+                print('  ' + sim)
+
+
 def main():
     parser = ArgumentParser('scheduler')
     parser.add_argument('-j', default=1, type=int, 
@@ -65,7 +96,7 @@ def main():
     if not os.path.isdir(ns.w):
         os.mkdir(ns.w)
     with indir(ns.w):
-        pass
+        run_simulations(j=ns.j)
 
 
 if __name__ == '__main__':
