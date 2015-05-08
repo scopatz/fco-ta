@@ -45,15 +45,18 @@ def make_simulation(t, lwr=0, fr=0, deployment=None):
 
 
 def make_simulations():
+    print("Making simulations...")
     tmin, tmax = 50, 251
     sims = [make_simulation(t, lwr=1) for t in range(tmin, tmax)]
     sims += [make_simulation(t, fr=1) for t in range(tmin, tmax)]
     sims += [make_simulation(t, lwr=-1) for t in range(tmin, tmax)]
     sims += [make_simulation(t, fr=-1) for t in range(tmin, tmax)]
+    print("...done")
     return sims
 
 
 def run_simulation(fname):
+    print("  " + fname)
     basename = os.path.splitext(fname)[0]
     oname = basename + '.sqlite'
     outname = basename + '.out'
@@ -74,9 +77,11 @@ def run_simulation(fname):
 
 
 def run_simulations(j=1):
+    print("Running simulations...")
     sims = make_simulations()
     pool = Pool(j)
     onames = pool.map(run_simulation, sims)
+    print("...done")
     if any(map((lambda x: x is None), onames)):
         print('Some simulations failed:')
         for sim, oname in zip(sims, onames):
