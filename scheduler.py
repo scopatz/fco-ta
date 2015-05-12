@@ -11,6 +11,10 @@ try:
 except ImportError:
     import json
 
+import numpy as np
+import pandas as pd
+import cymetric as cym
+
 import base
 
 @contextmanager
@@ -88,6 +92,27 @@ def run_simulations(j=1):
             if oname is None:
                 print('  ' + sim)
 
+def demand_curve(v0, r, tmax):
+    return v0 * (1 + r)**np.arange(tmax)
+
+
+def objective(sim):
+    with cym.dbopen(sim) as db:
+        evaler = cym.Evaluator(db)
+        elec_gen = evaler.eval('FcoElectricityGenerated')
+    elec_gen = elec_gen[-200:]
+    demand = demand_curve(90, 0.01, 200)
+    score = sum((elec_gen - demand).abs())
+    return score
+
+
+def compute_best(sims, j=1):
+    print("computing objective values:")
+    pool = Pool(j)
+    scores = pool.map(objective, sims)
+    results = sorted(zip(sims, socres), key=lambda x: x[1])
+    print(results)
+
 
 def main():
     parser = ArgumentParser('scheduler')
@@ -100,7 +125,7 @@ def main():
     if not os.path.isdir(ns.w):
         os.mkdir(ns.w)
     with indir(ns.w):
-        run_simulations(j=ns.j)
+        dbs = run_simulations(j=ns.j)
 
 
 if __name__ == '__main__':
