@@ -64,8 +64,11 @@ def run_simulation(fname):
     basename = os.path.splitext(fname)[0]
     oname = basename + '.sqlite'
     outname = basename + '.out'
-    if os.path.isfile(oname):
-        return oname
+    resname = basename + '-res.json'
+    if os.path.isfile(resname):
+        with open(resname, 'r') as f:
+            res = json.load(f)
+        return res
     out = ''
     cmd = ['cyclus', '-o', oname, fname]
     try:
@@ -77,19 +80,24 @@ def run_simulation(fname):
         return None
     with open(outname, 'w') as f:
         f.write(out)
-    return oname
+    score = objective(oname)
+    with open(resname, 'w') as f:
+        res = json.dump([oname, score], f)
+    if os.path.isfile(oname):
+        os.remove(oname)
+    return oname, score
 
 
 def run_simulations(j=1):
     print("Running simulations...")
     sims = make_simulations()
     pool = Pool(j)
-    onames = pool.map(run_simulation, sims)
+    res = pool.map(run_simulation, sims)
     print("...done")
-    if any(map((lambda x: x is None), onames)):
+    if any(map((lambda x: x is None), res)):
         print('Some simulations failed:')
-        for sim, oname in zip(sims, onames):
-            if oname is None:
+        for sim, r in zip(sims, res):
+            if r is None:
                 print('  ' + sim)
 
 def demand_curve(v0, r, tmax):
@@ -106,11 +114,9 @@ def objective(sim):
     return score
 
 
-def compute_best(sims, j=1):
-    print("computing objective values:")
-    pool = Pool(j)
-    scores = pool.map(objective, sims)
-    results = sorted(zip(sims, socres), key=lambda x: x[1])
+def compute_best(sims, scores):
+    print("sorting objective values:")
+    results = sorted(zip(sims, scores), key=lambda x: x[1])
     print(results)
 
 
@@ -125,7 +131,8 @@ def main():
     if not os.path.isdir(ns.w):
         os.mkdir(ns.w)
     with indir(ns.w):
-        dbs = run_simulations(j=ns.j)
+        results = run_simulations(j=ns.j)
+        compute_best(*results)
 
 
 if __name__ == '__main__':
