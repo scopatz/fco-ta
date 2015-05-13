@@ -81,11 +81,12 @@ def run_simulation(fname):
     with open(outname, 'w') as f:
         f.write(out)
     score = objective(oname)
+    res = [oname, score]
     with open(resname, 'w') as f:
-        res = json.dump([oname, score], f)
+        json.dump(res, f)
     if os.path.isfile(oname):
         os.remove(oname)
-    return oname, score
+    return res
 
 
 def run_simulations(j=1):
