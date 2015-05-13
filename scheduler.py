@@ -111,7 +111,7 @@ def objective(sim):
         elec_gen = evaler.eval('FcoElectricityGenerated')
     elec_gen = elec_gen[-200:]
     demand = demand_curve(90, 0.01, 200)
-    score = sum((elec_gen - demand).abs())
+    score = sum((elec_gen.Power - demand).abs())
     return score
 
 
