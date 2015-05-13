@@ -115,10 +115,10 @@ def objective(sim):
     return score
 
 
-def compute_best(sims, scores):
+def compute_best(results):
     print("sorting objective values:")
-    results = sorted(zip(sims, scores), key=lambda x: x[1])
-    print(results)
+    sres = sorted(results, key=lambda x: x[1])
+    print(sres)
 
 
 def main():
@@ -133,7 +133,7 @@ def main():
         os.mkdir(ns.w)
     with indir(ns.w):
         results = run_simulations(j=ns.j)
-        compute_best(*results)
+        compute_best(results)
 
 
 if __name__ == '__main__':
