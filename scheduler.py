@@ -100,6 +100,7 @@ def run_simulations(j=1):
         for sim, r in zip(sims, res):
             if r is None:
                 print('  ' + sim)
+    return res
 
 def demand_curve(v0, r, tmax):
     return v0 * (1 + r)**np.arange(tmax)
@@ -118,7 +119,7 @@ def objective(sim):
 def compute_best(results):
     print("sorting objective values:")
     sres = sorted(results, key=lambda x: x[1])
-    print(sres)
+    print("Best value is {0} at score {1}:".format(*sres[0]))
 
 
 def main():
