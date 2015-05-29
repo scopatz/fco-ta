@@ -50,7 +50,7 @@ def make_simulation(t, lwr=0, fr=0, deployment=None):
 
 def make_simulations():
     print("Making simulations...")
-    tmin, tmax, tn = 50, 251, 8
+    tmin, tmax, tn = 50, 251, 1
     sims = [make_simulation(t, lwr=1) for t in range(tmin, tmax, tn)]
     sims += [make_simulation(t, fr=1) for t in range(tmin, tmax, tn)]
     sims += [make_simulation(t, lwr=-1) for t in range(tmin, tmax, tn)]
