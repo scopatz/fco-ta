@@ -157,8 +157,10 @@
      "FuelfabFacility": {
       "fissle_stream": "U235", 
       "in_commods": {
-       "key": "DU", 
-       "val": 0.0
+       "item": {
+        "key": "DU", 
+        "val": 0.0
+       }
       }, 
       "maximum_storage": 1e+60, 
       "non_fissle_stream": "U238", 
@@ -172,8 +174,10 @@
      "FuelfabFacility": {
       "fissle_stream": "LWR Reprocessed", 
       "in_commods": {
-       "key": "FR Reprocessed", 
-       "val": 1.0
+       "item": {
+        "key": "FR Reprocessed", 
+        "val": 1.0
+       }
       }, 
       "maximum_storage": 1e+60, 
       "non_fissle_stream": "DU2", 
@@ -254,8 +258,10 @@
        "val": "LWR Fuel"
       }, 
       "interpol_pairs": {
-       "key": "BURNUP", 
-       "val": 42
+       "item": {
+        "key": "BURNUP", 
+        "val": 42
+       }
       }, 
       "libraries": {
        "val": "extLWR"
@@ -307,8 +313,10 @@
        "val": "FR Fuel"
       }, 
       "interpol_pairs": {
-       "key": "BURNUP", 
-       "val": "42"
+       "item": {
+        "key": "BURNUP", 
+        "val": "42"
+       }
       }, 
       "libraries": {
        "val": "FR50"
