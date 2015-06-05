@@ -351,7 +351,7 @@ CYCAMORE_SIM['simulation']['archetypes']['spec'].extend([
 CYCAMORE_SIM['simulation']['facility'].extend([
     {"name": "LWR Fuel Fab",
      "config": {"FuelFab": {
-        "fill_commod": "U238", 
+        "fill_commods": {"val": "U238"},
         "fill_recipe": "U238", 
         "fill_size": 1e60, 
         "fiss_commods": {"val": "U235"}, 
@@ -362,7 +362,7 @@ CYCAMORE_SIM['simulation']['facility'].extend([
         }},}, 
     {"name": "FR Fuel Fab",
      "config": {"FuelFab": {
-        "fill_commod": "DU2", 
+        "fill_commods": {"val": "DU2"}, 
         "fill_recipe": "DU", 
         "fill_size": 1e60,
         "fiss_commod_prefs": {"val": [1.0, 2.0]},
