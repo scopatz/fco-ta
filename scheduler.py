@@ -77,15 +77,19 @@ def run_simulation(fname):
     except subprocess.CalledProcessError:
         if os.path.isfile(oname):
             os.remove(oname)
+        print("    - cyclus failed for {0}".format(fname))
         return None
     with open(outname, 'w') as f:
         f.write(out)
     score = objective(oname)
+    print("    - {0} has score {1}".format(oname, score))
     res = [oname, score]
     with open(resname, 'w') as f:
         json.dump(res, f)
+    print("    - score writen to {0}".format(resname))
     if os.path.isfile(oname):
         os.remove(oname)
+    print("    - {0} removed".format(oname))
     return res
 
 

@@ -286,51 +286,55 @@
      "ReactorFacility": {
       "CR_fissile": {
        "val": [
-        "922350", 
         "942380", 
         "942390", 
         "942400", 
         "942410", 
-        "942420"
+        "942420", 
+        "952410", 
+        "952430", 
+        "962420", 
+        "942440"
        ]
       }, 
+      "CR_target": 1.2, 
       "DA_mode": 0, 
-      "batches": 5, 
+      "batches": 6, 
       "burnupcalc_timestep": 50, 
-      "core_mass": 3000, 
-      "cylindrical_delta": "5", 
-      "disadv_a": "0.40950", 
-      "disadv_b": "0.707490", 
-      "disadv_fuel_sigs": "0.430", 
-      "disadv_mod_siga": "0.2220", 
-      "disadv_mod_sigs": "3.440", 
-      "efficiency": "0.330", 
-      "flux_mode": "1", 
-      "fuel_Sig_tr": "3.940", 
-      "fuel_area": "89197", 
-      "generated_power": "400.0", 
+      "core_mass": 10000, 
+      "cylindrical_delta": 5, 
+      "disadv_a": 0.4095, 
+      "disadv_b": 0.70749, 
+      "disadv_fuel_sigs": 0.43, 
+      "disadv_mod_siga": 0.222, 
+      "disadv_mod_sigs": 3.44, 
+      "efficiency": 0.4, 
+      "flux_mode": 2, 
+      "fuel_Sig_tr": 3.94, 
+      "fuel_area": 89197, 
+      "generated_power": 1000.0, 
       "in_commods": {
        "val": "FR Fuel"
       }, 
       "interpol_pairs": {
        "item": {
         "key": "BURNUP", 
-        "val": "42"
+        "val": 42
        }
       }, 
       "libraries": {
        "val": "FR50"
       }, 
       "max_inv_size": "1.000000000000000E+299", 
-      "mod_Sig_a": "0.02220", 
-      "mod_Sig_f": "0.0", 
-      "mod_Sig_tr": "3.460", 
-      "mod_thickness": "100", 
-      "nonleakage": "0.57", 
+      "mod_Sig_a": 0.0222, 
+      "mod_Sig_f": 0.0, 
+      "mod_Sig_tr": 3.46, 
+      "mod_thickness": 100, 
+      "nonleakage": 0.57, 
       "out_commod": "FR Spent Fuel", 
-      "reactor_life": 960, 
-      "target_burnup": 200, 
-      "tolerance": "0.0010"
+      "reactor_life": 2060, 
+      "target_burnup": 52.63, 
+      "tolerance": 0.001
      }
     }, 
     "lifetime": 960, 
