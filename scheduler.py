@@ -50,7 +50,7 @@ def make_simulation(t, lwr=0, fr=0, deployment=None):
 
 def make_simulations():
     print("Making simulations...")
-    tmin, tmax, tn = 50, 251, 1
+    tmin, tmax, tn = 50, 251, 800
     sims = [make_simulation(t, lwr=1) for t in range(tmin, tmax, tn)]
     sims += [make_simulation(t, fr=1) for t in range(tmin, tmax, tn)]
     sims += [make_simulation(t, lwr=-1) for t in range(tmin, tmax, tn)]
@@ -96,8 +96,11 @@ def run_simulation(fname):
 def run_simulations(j=1):
     print("Running simulations...")
     sims = make_simulations()
-    pool = Pool(j)
-    res = pool.map(run_simulation, sims)
+    if j == 1:
+        res = list(map(run_simulation, sims))
+    else:
+        pool = Pool(j)
+        res = pool.map(run_simulation, sims)
     print("...done")
     if any(map((lambda x: x is None), res)):
         print('Some simulations failed:')
