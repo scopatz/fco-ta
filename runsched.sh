@@ -1,2 +1,2 @@
 #!/bin/bash
-time python scheduler.py -j 2
+time python scheduler.py -j 1
