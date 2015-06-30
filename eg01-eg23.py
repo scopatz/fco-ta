@@ -361,7 +361,7 @@ BRIGHT_SIM['simulation']['facility'].extend([
         "fuel_Sig_tr": 3.940, 
         "fuel_area": 89197, 
         #"generated_power": 1000.0, 
-        "generated_power": 25000.0, 
+        "generated_power": 2500.0, 
         "in_commods": {"val": "FR Fuel"}, 
         "interpol_pairs": {"item": {"key": "BURNUP", "val": 42}}, 
         "libraries": {"val": "FR50"}, 
