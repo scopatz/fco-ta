@@ -301,7 +301,7 @@
       "DA_mode": 0, 
       "batches": 3, 
       "burnupcalc_timestep": 50, 
-      "core_mass": 35000.0, 
+      "core_mass": 30000.0, 
       "cylindrical_delta": 5, 
       "disadv_a": 0.4095, 
       "disadv_b": 0.70749, 
