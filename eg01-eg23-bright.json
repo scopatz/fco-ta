@@ -312,7 +312,7 @@
       "flux_mode": 2, 
       "fuel_Sig_tr": 3.94, 
       "fuel_area": 89197, 
-      "generated_power": 1000.0, 
+      "generated_power": 25000.0, 
       "in_commods": {
        "val": "FR Fuel"
       }, 
